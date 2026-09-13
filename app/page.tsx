@@ -1,69 +1,121 @@
-import Image from "next/image";
+import Image from "next/image"
+
+import { Navbar } from "./componants/Navbar"
+import Link from "next/link"
+import Footer from "./componants/Footer"
+import Caroussel from "./componants/Caroussel"
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+     return (
+          <>
+               <Navbar />
+               <main>
+                    <div className="relative h-120 w-full overflow-hidden border">
+                         <Image
+                              src={"https://placehold.co/1200x400"}
+                              alt="Placeholder"
+                              fill
+                              unoptimized
+                              className="object-cover z-0"
+                         />
+                         <div className="inset-0 absolute lg:grid grid-cols-2 p-12">
+                              <h1 className="col-start-1 text-7xl font-play text-sec font-bold italic">
+                                   Rénovation Intérieure à Lille et alentours
+                              </h1>
+                              <p className="col-start-2 row-start-2 text-4xl font-bold font-play">
+                                   Depuis plus de 4 ans, nous mettons nos 34 ans d'experience dans la peinture en
+                                   batiment, l'enduit,la pose de sol et les finitions décoratives.
+                              </p>
+                              <Link href={"/services"} className="col-start-2 row-start-3">
+                                   <p className="px-24 py-3 text-5xl bg-main text-bg font-play font-bold italic w-fit rounded-lg">
+                                        {"Nos Services ->"}
+                                   </p>
+                              </Link>
+                         </div>
+                    </div>
+                    <section>
+                         <h2 className="titlemain pl-30 pt-10">Pourquoi Nous ?</h2>
+                         <article className="flex gap-24 p-10 justify-around mt-12">
+                              <p className="text-left text-3xl w-[30%]">
+                                   De père en fils, nous avons accumulés 34 ans d'experience dans la peinture en
+                                   batiments. Cette entreprise est pour nous le projet le plus ambicieux de notre
+                                   carrière. Nous réalisons tout sur mesure, tout est adapté à votre situation et à
+                                   votre batiment.
+                              </p>
+                              <Image
+                                   src={"https://placehold.co/400x400"}
+                                   alt="Placeholder"
+                                   height={400}
+                                   width={400}
+                                   unoptimized
+                              />
+                         </article>
+                    </section>
+                    <section className="bg-main">
+                         <h2 className="titlemain text-right pr-30 pt-10 text-bg!">Nos réalisations</h2>
+                         <div className="flex justify-center mt-12">
+                              <div>
+                                   <h3 className="text-4xl font-play italic font-bold text-sec ml-10">Avant</h3>
+                                   <Image
+                                        src={"https://placehold.co/500x500"}
+                                        alt="Placeholder"
+                                        height={500}
+                                        width={500}
+                                        unoptimized
+                                   />
+                              </div>
+                              <p className="text-[200px] self-center text-sec font-play mx-30">{"->"}</p>
+                              <div className="flex flex-col">
+                                   <h3 className="text-4xl font-play italic font-bold text-sec self-end mr-10">
+                                        Après
+                                   </h3>
+                                   <Image
+                                        src={"https://placehold.co/500x500"}
+                                        alt="Placeholder"
+                                        height={500}
+                                        width={500}
+                                        unoptimized
+                                   />
+                              </div>
+                         </div>
+                         <div className="grid grid-cols-6 grid-rows-4  items-center py-24">
+                              <Image
+                                   src={"https://placehold.co/500x500"}
+                                   alt="Placeholder"
+                                   height={500}
+                                   width={500}
+                                   unoptimized
+                                   className="col-start-2 col-span-2 row-start-1 row-span-2"
+                              />
+                              <Image
+                                   src={"https://placehold.co/500x500"}
+                                   alt="Placeholder"
+                                   height={500}
+                                   width={500}
+                                   unoptimized
+                                   className="col-start-3 col-span-2 row-start-2 row-span-2"
+                              />
+                              <Image
+                                   src={"https://placehold.co/500x500"}
+                                   alt="Placeholder"
+                                   height={500}
+                                   width={500}
+                                   unoptimized
+                                   className="col-start-4 col-span-2 row-start-3 row-span-2"
+                              />
+                              <Link href={"/galerie"} className="w-fit row-start-4 col-start-2 col-span-1 mt-12">
+                                   <p className="bg-sec px-24 py-2 text-7xl rounded-lg font-play italic text-main ">
+                                        Galerie
+                                   </p>
+                              </Link>
+                         </div>
+                    </section>
+                    <section>
+                         <h2 className="titlemain pl-30">Nos Services</h2>
+                         <Caroussel />
+                    </section>
+                    <Footer />
+               </main>
+          </>
+     )
 }
