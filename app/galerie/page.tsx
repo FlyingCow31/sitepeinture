@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { Navbar } from "../componants/Navbar"
 import Footer from "../componants/Footer"
+import Link from "next/link"
+import { ButtonGalerie } from "../componants/buttons"
 
 const images = [
      { src: "https://placehold.co/400x400", alt: "Oui", className: "lg:col-start-1 lg:row-start-1 lg:row-span-3" },
@@ -20,7 +22,7 @@ const images = [
 
 const textes = [
      {
-          title: "Titre",
+          title: "Galerie",
           date: "09/09/2026",
           texte: "Petit texte qui récapitule un peu la photo qu'il y a sur le coté...",
           className: "lg:col-start-2 lg:col-span-2 lg:row-start-1 lg:row-span-2",
@@ -62,9 +64,46 @@ export default function Page() {
                          ))}
                          {textes.map((texte, i) => (
                               <article key={i} className={`${texte.className}`}>
-                                   {texte.main ? <h1>{texte.texte}</h1> : <h3>{texte.texte}</h3>}
+                                   {texte.main ? (
+                                        <h1 className="titlemain">{texte.title}</h1>
+                                   ) : (
+                                        <h3 className="font-play italic font-bold text-3xl">{texte.title}</h3>
+                                   )}
+                                   <p className="opacity-60 text-2xl font-play italic mt-5">{texte.date}</p>
+                                   <p className="text-2xl w-[70%]">{texte.texte}</p>
                               </article>
                          ))}
+
+                         {/* Special One */}
+                         <article className={`col-start-1 col-span-2 row-start-8 row-span-2`}>
+                              <h3 className="font-play italic font-bold text-3xl">Titre spécial 1</h3>
+
+                              <p className="opacity-60 text-2xl font-play italic mt-5">09/09/2026</p>
+                              <p className="text-2xl w-[70%]">
+                                   Petit texte qui récapitule un peu la photo qu'il y a sur le coté...
+                              </p>
+                              <ButtonGalerie text="Réaliser un devis ->" href="/contact" />
+                         </article>
+                         {/* Special One */}
+                         <article className={`col-start-1 col-span-2 row-start-8 row-span-2`}>
+                              <h3 className="font-play italic font-bold text-3xl">Titre spécial 1</h3>
+
+                              <p className="opacity-60 text-2xl font-play italic mt-5">09/09/2026</p>
+                              <p className="text-2xl w-[70%]">
+                                   Petit texte qui récapitule un peu la photo qu'il y a sur le coté...
+                              </p>
+                              <ButtonGalerie text="Réaliser un devis ->" href="/contact" />
+                         </article>
+                         {/* Special Two */}
+                         <article className={`col-start-3 col-span-1 row-start-12 row-span-2`}>
+                              <h3 className="font-play italic font-bold text-3xl">Titre spécial 1</h3>
+
+                              <p className="opacity-60 text-2xl font-play italic mt-5">09/09/2026</p>
+                              <p className="text-2xl w-[70%]">
+                                   Petit texte qui récapitule un peu la photo qu'il y a sur le coté...
+                              </p>
+                              <ButtonGalerie text="Réaliser un devis ->" href="/contact" />
+                         </article>
                     </section>
                </main>
                <Footer />
