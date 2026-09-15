@@ -1,12 +1,11 @@
 import Image from "next/image"
-import { Navbar } from "../componants/Navbar"
 import Link from "next/link"
 import Footer from "../componants/Footer"
 
 export default function Page() {
      return (
           <>
-               <main className="flex lg:flex-row flex-col gap-6">
+               <main className="flex lg:flex-row flex-col gap-6 ">
                     <div className="relative w-screen h-50 lg:h-screen lg:w-1/2">
                          <Image
                               src={"https://placehold.co/400x400"}
@@ -20,14 +19,14 @@ export default function Page() {
                          <Link href={"/"}>
                               <p className="font-man text-2xl">{"<- Accueil"}</p>
                          </Link>
-                         <h1 className="titlemain mt-24">Réalisez un devis gratuitement</h1>
+                         <h1 className="titlemain text-3xl! mt-10">Réalisez un devis gratuitement</h1>
                          <p className="opacity-50 mt-5">
                               Ou contactez-nous à{" "}
                               <a href="mailto:contact@stylhome.fr" className="text-blue-900">
                                    contact@stylhome.fr
                               </a>
                          </p>
-                         <form className="mt-8 flex flex-col gap-5">
+                         <form className="mt-7 flex flex-col gap-2">
                               <div className="flex items-center justify-between">
                                    <div className="flex flex-col w-[49%]">
                                         <label htmlFor="name" className="ml-10 -mb-1 text-2xl font-play italic">
@@ -37,7 +36,7 @@ export default function Page() {
                                              id="name"
                                              name="name"
                                              type="text"
-                                             className="border-sec border-3 rounded-lg p-4"
+                                             className="border-sec border-3 rounded-lg p-2"
                                              placeholder="Votre nom"
                                              required
                                         />
@@ -50,7 +49,7 @@ export default function Page() {
                                              id="prenom"
                                              name="prenom"
                                              type="text"
-                                             className="border-sec border-3 rounded-lg p-4"
+                                             className="border-sec border-3 rounded-lg p-2"
                                              placeholder="Votre Prénom"
                                              required
                                         />
@@ -65,7 +64,7 @@ export default function Page() {
                                         id="email"
                                         name="email"
                                         type="email"
-                                        className="border-sec border-3 rounded-lg p-4"
+                                        className="border-sec border-3 rounded-lg p-2"
                                         placeholder="votreemail@nomdedomaine.fr"
                                         required
                                    />
@@ -79,7 +78,7 @@ export default function Page() {
                                         id="objet"
                                         name="objet"
                                         type="text"
-                                        className="border-sec border-3 rounded-lg p-4 italic"
+                                        className="border-sec border-3 rounded-lg p-2 italic"
                                         placeholder="Peinture Murale"
                                    />
                               </div>
@@ -93,7 +92,7 @@ export default function Page() {
                                         name="message"
                                         className="border-sec border-3 rounded-lg p-4 italic"
                                         placeholder="J'ai 35m2 à refaire, je veux..."
-                                        rows={5}
+                                        rows={2}
                                         required
                                    />
                               </div>
