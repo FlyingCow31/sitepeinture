@@ -26,7 +26,7 @@ export default function Home() {
                               alt="Placeholder"
                               fill
                               unoptimized
-                              className="hidden lg:object-cover z-0"
+                              className="hidden lg:block lg:object-cover z-0"
                          />
                          <div className="flex flex-col lg:inset-0 lg:absolute lg:grid grid-cols-2 p-4 gap-6 lg:gap-0 lg:p-12">
                               <h1 className="lg:col-start-1 text-5xl lg:text-7xl font-play text-sec font-bold italic">

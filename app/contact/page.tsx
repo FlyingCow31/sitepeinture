@@ -1,12 +1,13 @@
 import Image from "next/image"
 import { Navbar } from "../componants/Navbar"
 import Link from "next/link"
+import Footer from "../componants/Footer"
 
 export default function Page() {
      return (
           <>
-               <main className="lg:flex gap-6">
-                    <div className="relative h-screen w-1/2">
+               <main className="flex lg:flex-row flex-col gap-6">
+                    <div className="relative w-screen h-50 lg:h-screen lg:w-1/2">
                          <Image
                               src={"https://placehold.co/400x400"}
                               alt="alt"
@@ -15,7 +16,7 @@ export default function Page() {
                               className="object-cover"
                          />
                     </div>
-                    <div className="w-[40%]">
+                    <div className="w-full lg:w-[40%] lg:h-screen p-4 lg:p-0">
                          <Link href={"/"}>
                               <p className="font-man text-2xl">{"<- Accueil"}</p>
                          </Link>
@@ -105,6 +106,9 @@ export default function Page() {
                          </form>
                     </div>
                </main>
+               <div className="lg:hidden">
+                    <Footer />
+               </div>
           </>
      )
 }

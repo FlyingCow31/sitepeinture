@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Navbar } from "../componants/Navbar"
+import { MobileNav, Navbar } from "../componants/Navbar"
 import Footer from "../componants/Footer"
 import Link from "next/link"
 import { ButtonGalerie } from "../componants/buttons"
@@ -53,19 +53,21 @@ export default function Page() {
           <>
                <Navbar />
                <main>
-                    <section className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:auto-rows-48 lg:grid-flow-dense py-24">
+                    <MobileNav />
+                    <section className="flex flex-col lg:grid grid-cols-1 gap-4 lg:grid-cols-3 lg:auto-rows-48 lg:grid-flow-dense py-24">
+                         <h1 className="lg:hidden block titlemain mx-auto text-6xl! pb-12">Galerie</h1>
                          {images.map((image, index) => (
                               <figure
                                    key={`${image.src}-${index}`}
-                                   className={`relative overflow-hidden rounded-2xl aspect-4/3 lg:aspect-auto ${image.className}`}
+                                   className={`relative overflow-hidden rounded-2xl aspect-4/3 lg:aspect-auto mx-4 lg:mx-0 ${image.className}`}
                               >
                                    <Image src={image.src} alt={image.alt} fill unoptimized className="object-cover" />
                               </figure>
                          ))}
                          {textes.map((texte, i) => (
-                              <article key={i} className={`${texte.className}`}>
+                              <article key={i} className={`hidden lg:block ${texte.className}`}>
                                    {texte.main ? (
-                                        <h1 className="titlemain">{texte.title}</h1>
+                                        <h1 className="titlemain hidden lg:block">{texte.title}</h1>
                                    ) : (
                                         <h3 className="font-play italic font-bold text-3xl">{texte.title}</h3>
                                    )}
@@ -75,7 +77,7 @@ export default function Page() {
                          ))}
 
                          {/* Special One */}
-                         <article className={`col-start-1 col-span-2 row-start-8 row-span-2`}>
+                         <article className={`hidden lg:block col-start-1 col-span-2 row-start-8 row-span-2`}>
                               <h3 className="font-play italic font-bold text-3xl">Titre spécial 1</h3>
 
                               <p className="opacity-60 text-2xl font-play italic mt-5">09/09/2026</p>
@@ -85,7 +87,7 @@ export default function Page() {
                               <ButtonGalerie text="Réaliser un devis ->" href="/contact" />
                          </article>
                          {/* Special One */}
-                         <article className={`col-start-1 col-span-2 row-start-8 row-span-2`}>
+                         <article className={`hidden lg:block col-start-1 col-span-2 row-start-8 row-span-2`}>
                               <h3 className="font-play italic font-bold text-3xl">Titre spécial 1</h3>
 
                               <p className="opacity-60 text-2xl font-play italic mt-5">09/09/2026</p>
@@ -95,11 +97,11 @@ export default function Page() {
                               <ButtonGalerie text="Réaliser un devis ->" href="/contact" />
                          </article>
                          {/* Special Two */}
-                         <article className={`col-start-3 col-span-1 row-start-12 row-span-2`}>
+                         <article className={`text-center lg:text-left col-start-3 col-span-1 row-start-12 row-span-2`}>
                               <h3 className="font-play italic font-bold text-3xl">Titre spécial 1</h3>
 
                               <p className="opacity-60 text-2xl font-play italic mt-5">09/09/2026</p>
-                              <p className="text-2xl w-[70%]">
+                              <p className="text-2xl lg:w-[70%] py-8 lg:py-0">
                                    Petit texte qui récapitule un peu la photo qu'il y a sur le coté...
                               </p>
                               <ButtonGalerie text="Réaliser un devis ->" href="/contact" />

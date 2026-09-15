@@ -30,7 +30,7 @@ export function MobileNav() {
      const [status, setStatus] = useState(false)
      return (
           <>
-               <nav className="relative flex justify-between p-4 items-center lg:hidden bg-bg">
+               <nav className="font-play italic relative flex justify-between p-4 items-center lg:hidden bg-bg">
                     <Link href={"/"}>
                          <Image src={"/logo.png"} alt="Logo Stylhome" width={192} height={40} />
                     </Link>
@@ -56,22 +56,22 @@ export function MobileNav() {
                               </Link>
                               <Link href={"/services"}>
                                    <p
-                                        className={` ${pathname == "/services" ? "bg-sec border-3  shadow-neo" : "hover:bg-darker"} rounded-lg px-6 py-2 `}
+                                        className={` ${pathname == "/services" ? "bg-sec border-3" : "hover:bg-darker"} rounded-lg px-6 py-2 `}
                                    >
                                         → Services
                                    </p>
                               </Link>
-                              <Link href={"/assistance"}>
+                              <Link href={"/galerie"}>
                                    <p
-                                        className={` ${pathname == "/assistance" ? "bg-sec border-3  shadow-neo" : "hover:bg-darker"} rounded-lg px-6 py-2 `}
+                                        className={` ${pathname == "/galerie" ? "bg-sec border-3 " : "hover:bg-darker"} rounded-lg px-6 py-2 `}
                                    >
-                                        → Assistance
+                                        → Galerie
                                    </p>
                               </Link>
 
                               <Link href={"/contact"} className="mt-auto mb-20">
-                                   <p className="bg-sec px-6 py-2 text-xl font-dm rounded-lg border-3 border-border shadow-neo lightbgtransition">
-                                        Rendez-vous →
+                                   <p className="bg-sec px-6 py-2 text-xl font-man rounded-lg border-3 border-border lightbgtransition">
+                                        Contact →
                                    </p>
                               </Link>
                          </div>
