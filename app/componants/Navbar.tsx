@@ -8,18 +8,18 @@ import { useState } from "react"
 
 export function Navbar() {
      return (
-          <nav className="hidden p-4 lg:flex gap-6 w-full items-center font-play  text-3xl italic text-main">
+          <nav className="hidden p-4 lg:flex gap-6 w-full items-center font-play text-3xl italic text-main ">
                <Link href={"/"}>
                     <Image src={"/logoaa.png"} alt="Logo de StylHome" width={120} height={60} className="border-3" />
                </Link>
                <Link href={"/services"} className="ml-auto">
-                    <p>Services</p>
+                    <p className="hover:bg-darker rounded-lg px-4">Services</p>
                </Link>
                <Link href={"/galerie"}>
-                    <p>Galerie</p>
+                    <p className="hover:bg-darker rounded-lg px-4">Galerie</p>
                </Link>
                <Link href={"/contact"}>
-                    <p className="bg-sec px-6 py-2 rounded-lg">Contact</p>
+                    <p className="bg-sec px-6 py-2 rounded-lg hover:bg-sechover">Contact</p>
                </Link>
           </nav>
      )
@@ -70,7 +70,7 @@ export function MobileNav() {
                               </Link>
 
                               <Link href={"/contact"} className="mt-auto mb-20">
-                                   <p className="bg-sec px-6 py-2 text-xl font-man rounded-lg border-3 border-border lightbgtransition">
+                                   <p className="bg-sec! px-6 py-2 text-xl font-man rounded-lg border-3 border-border hover:bg-sechover">
                                         Contact →
                                    </p>
                               </Link>

@@ -1,3 +1,4 @@
+import Footer from "../componants/Footer"
 import { MobileNav, Navbar } from "../componants/Navbar"
 
 export default function Page() {
@@ -6,21 +7,19 @@ export default function Page() {
                <Navbar />
                <MobileNav />
                <main className="font-man text-center">
-                    <h1 className="titlemain py-12 text-5xl lg:text-7xl h2:text-2xl! p:text-xl! p-4">
-                         Mentions Légales
-                    </h1>
+                    <h1 className="titlemain py-12 lg:text-5xl h2:text-2xl! p:text-xl! p-4">Mentions Légales</h1>
                     <section className="mb-8 ">
                          <h2 className="text-2xl font-bold mb-3">1. Éditeur du site</h2>
                          <p>
                               Le site <strong>stylhome.fr </strong> est édité par&nbsp;:
                               <br />
-                              <strong>SARL ETS Alexandre et fils</strong>
+                              <strong>GONCALVES PATRICK EI (Styl'Home)</strong>
                               <br />
                               Siège social&nbsp;: 229 Rue de Solférino, 59000 Lille, France
                               <br />
-                              SIREN&nbsp;: 552047508
+                              SIREN&nbsp;: 494 533 201
                               <br />
-                              SIRET (siège)&nbsp;: 9453320100047
+                              SIRET (Siège)&nbsp;: 49453320100047
                               <br />
                               Code APE&nbsp;: 3.34Z-C - Travaux de peinture intérieure et peinture plâtrerie
                               <br />
@@ -154,6 +153,7 @@ export default function Page() {
                               défaut de résolution amiable, les tribunaux français seront seuls compétents.
                          </p>
                     </section>
+                    <Footer />
                </main>
           </>
      )

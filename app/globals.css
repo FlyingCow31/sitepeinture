@@ -2,13 +2,20 @@
 
 :root {
      --bg: #fbf8f3;
+     --bgdark: #e5e2dd;
      --main: #06172c;
+     --main-hover: #0a2444;
      --sec: #b8956a;
+     --sechover: #b28b5b;
+     --tint: #0b1c28;
 }
 
 @theme inline {
+     --color-tint: var(--tint);
      --color-bg: var(--bg);
+     --color-sechover: var(--sechover);
      --color-main: var(--main);
+     --color-darker: var(--bgdark);
      --color-sec: var(--sec);
      --font-play: var(--font-playfair_display);
      --font-man: var(--font-manrope);
@@ -33,75 +40,28 @@
      font-style: italic;
      font-weight: bold;
 }
+
+.buttonmain:hover {
+     background-color: var(--main-hover);
+     transform: scale(1.1);
+     transition: all 100ms ease-in-out;
+}
+.buttonsec:hover {
+     background-color: var(--sec-hover);
+     transform: scale(1.1);
+     transition: all 100ms ease-in-out;
+}
+
+.texthover:hover {
+     transform: translateX(7);
+     opacity: 1;
+     transition: all 100ms ease-in-out;
+}
+
 @media (max-width: 767px) {
      .titlemain {
           font-size: 32px;
           text-underline-offset: 12px;
           text-decoration-thickness: 6px;
-     }
-}
-
-.image-container {
-     display: flex;
-     flex-direction: row-reverse;
-     align-items: center;
-     justify-content: flex-start;
-     position: relative;
-     height: 35rem;
-     .firstContainer {
-          z-index: 3;
-          width: clamp(20rem, 22.5vw, 25rem);
-          height: auto;
-          position: absolute;
-          .first {
-               border-radius: 1.56rem;
-               border: 5px solid var(--sec);
-               width: clamp(20rem, 22.5vw, 25rem);
-               height: auto;
-          }
-     }
-     .secContainer {
-          z-index: 2;
-          width: clamp(20rem, 22.5vw, 25rem);
-          height: auto;
-          position: absolute;
-          .secondary {
-               border-radius: 1.56rem;
-               border: 5px solid var(--sec);
-               width: clamp(20rem, 22.5vw, 25rem);
-               height: auto;
-               opacity: 70%;
-          }
-     }
-     .thirdContainer {
-          z-index: 1;
-          width: clamp(20rem, 22.5vw, 25rem);
-          height: auto;
-          position: absolute;
-          .third {
-               border-radius: 1.56rem;
-               border: 5px solid var(--sec);
-               width: clamp(20rem, 22.5vw, 25rem);
-               height: auto;
-               opacity: 30%;
-          }
-     }
-     .controls {
-          display: flex;
-          justify-content: space-between;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 12.5rem;
-          z-index: 4;
-          transform: translateY(5rem);
-     }
-     .prevCont,
-     .nextCont {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: transparent;
-          border: 2px solid transparent;
      }
 }

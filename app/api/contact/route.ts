@@ -76,8 +76,7 @@ export async function POST(request: NextRequest) {
                `,
           })
 
-          const clientMailHtml = `
-               <div
+          const clientMailHtml = `<div
      style="
           margin: 0 auto;
           max-width: 640px;
@@ -85,49 +84,33 @@ export async function POST(request: NextRequest) {
           font-family: Arial, sans-serif;
           color: #1b4967;
           line-height: 1.6;
-          background-color: #d7e8f4;
+          background-color: #fbf8f3;
      "
 >
-     <div
-          style="
-               background-color: #ffffff;
-               border: 3px solid #1b4967;
-               border-radius: 16px;
-               padding: 24px;
-               box-shadow: 4px 6px 0px #1b4967;
-          "
-     >
-          <h1 style="margin: 0 0 16px; font-size: 24px; line-height: 1.2; font-weight: 700; color: #1b4967">
-               ${escapeHtml(verified.name)}, merci d'avoir pris rendez-vous!
+     <div style="background-color: #ffffff; border: 3px solid #b8956a; border-radius: 16px; padding: 24px">
+          <h1 style="margin: 0 0 16px; font-size: 24px; line-height: 1.2; font-weight: 700; color: #b8956a">
+               ${escapeHtml(verified.name)}, merci pour votre message!
           </h1>
           <p style="margin: 0 0 16px; font-size: 16px">
                Ceci est un message automatique pour vous confirmer que votre message a bien été pris en compte.
           </p>
           <p style="margin: 0 0 16px; font-size: 16px">
-               Vous avez rendez-vous le
-               <strong>
-                    ${escapeHtml(String(verified.name))} ${escapeHtml(verified.name)} à ${escapeHtml(verified.name)}h
-               </strong>
-               pour un(e) ${escapeHtml(verified.name)}.
+               Nous reviendrons bien vite vers vous, aux coordonnés renseignées !
           </p>
           <p style="margin: 0 0 16px; font-size: 16px; white-space: pre-line">
-               Voilà les détails qui ont été transmis: "${escapeHtml(verified.message)}"
+               Vous nous avez transmis le message suivant: "${escapeHtml(verified.message)}"
           </p>
           <p style="margin: 0 0 16px; font-size: 16px">
-               Si vous avez une question, vous pouvez m'envoyer un message sur whatsapp uniquement au +33 6 58 53 82 54
-               ou par mail à contact@gaeltournier.dev.
+               Si vous avez une question, vous pouvez nous contacter par mail à l'adresse contact@stylhome.fr
           </p>
           <p style="margin: 0; font-size: 16px">
                Très belle journée!
                <br />
-               Gaël.
-          </p>
-          <p style="margin: 16px 0 0; font-size: 14px; color: #6b7280; font-style: italic">
-               Si vous ne recevez pas de mail supplémentaire depuis un email se terminant en @gaeltournier.dev,
-               considérez que votre rendez-vous est confirmé!
+               Styl'Home.
           </p>
      </div>
 </div>
+
           `
 
           await transporter.sendMail({

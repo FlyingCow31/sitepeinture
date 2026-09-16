@@ -1,20 +1,26 @@
 "use client"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function Form() {
+     const divRef = useRef<HTMLDivElement>(null)
+
      const [name, setName] = useState("")
      const [prenom, setPrenom] = useState("")
      const [email, setEmail] = useState("")
      const [objet, setObjet] = useState("")
      const [message, setMessage] = useState("")
      const [website, setWebsite] = useState<string | null>(null)
+     const [loading, setLoading] = useState(false)
+     const [success, setSuccess] = useState(false)
 
      const [errors, setErrors] = useState<string | null>(null)
      const [formLoadedAt] = useState(() => Date.now())
      async function HandleSubmit(event: React.SubmitEvent<HTMLFormElement>) {
           event.preventDefault()
 
-          // TODO Insert loading state here
+          setLoading(true)
+          setSuccess(false)
+          setErrors(null)
 
           const payload = {
                formLoadedAt,
@@ -41,11 +47,30 @@ export default function Form() {
                     setPrenom("")
                     setObjet("")
                     setMessage("")
+                    setSuccess(true)
+                    setLoading(false)
+               } else {
+                    setErrors(data?.error ?? "Une erreur est survenue. Veuillez réessayer.")
+                    setLoading(false)
                }
           } catch (error) {
-               // TODO Update the loading screen
+               setErrors("Une erreur est survenue. Veuillez réessayer.")
+               setLoading(false)
           }
      }
+
+     useEffect(() => {
+          if (loading) {
+               divRef.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+               document.body.style.overflow = "hidden"
+          } else {
+               document.body.style.overflow = ""
+          }
+
+          return () => {
+               document.body.style.overflow = ""
+          }
+     }, [loading])
 
      return (
           <form className="-mt-5 flex flex-col gap-2" onSubmit={HandleSubmit}>
@@ -138,9 +163,44 @@ export default function Form() {
                          required
                     />
                </div>
-               <button type="submit" className="border py-2 bg-main text-bg rounded-lg text-2xl font-play italic">
+               <button
+                    type="submit"
+                    className="border py-2 bg-main text-bg rounded-lg text-2xl font-play italic buttonmain"
+               >
                     Envoyer
                </button>
+               {loading && (
+                    <div
+                         ref={divRef}
+                         className="bg-tint/80 p-8 text-bg h-screen w-screen fixed inset-0 overflow-hidden"
+                    >
+                         <div className="flex min-h-65 flex-col items-center justify-center gap-4 rounded-2xl text-center">
+                              <div className="h-14 w-14 animate-spin rounded-full border-4 border-white/20 border-t-white" />
+                              <p className="text-2xl font-bold">Envoi en cours</p>
+                              <p className="max-w-sm text-base leading-relaxed text-white/75">
+                                   Vous recevrez un mail de confirmation, vérifiez vos spams...
+                              </p>
+                         </div>
+                    </div>
+               )}
+               {success && !loading && (
+                    <div className="bg-tint/80 p-8 text-bg h-screen w-screen fixed inset-0 overflow-hidden">
+                         <div className="flex min-h-65 flex-col items-center justify-center gap-4 rounded-2xl text-center">
+                              <p className="text-2xl font-bold">Message envoyé</p>
+                              <p className="max-w-sm text-base leading-relaxed text-white/75">
+                                   Merci pour votre message, nous vous répondrons bientôt.
+                              </p>
+                         </div>
+                    </div>
+               )}
+               {errors && !loading && (
+                    <div className="bg-tint/80 p-8 text-bg h-screen w-screen fixed inset-0 overflow-hidden">
+                         <div className="flex min-h-65 flex-col items-center justify-center gap-4 rounded-2xl text-center">
+                              <p className="text-2xl font-bold">Échec de l'envoi</p>
+                              <p className="max-w-sm text-base leading-relaxed text-white/75">{errors}</p>
+                         </div>
+                    </div>
+               )}
           </form>
      )
 }

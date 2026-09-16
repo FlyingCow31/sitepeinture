@@ -55,7 +55,7 @@ export default function Page() {
                <main>
                     <MobileNav />
                     <section className="flex flex-col lg:grid grid-cols-1 gap-4 lg:grid-cols-3 lg:auto-rows-48 lg:grid-flow-dense py-24">
-                         <h1 className="lg:hidden block titlemain mx-auto text-6xl! pb-12">Galerie</h1>
+                         <h1 className="lg:hidden block titlemain mx-auto pb-12">Galerie</h1>
                          {images.map((image, index) => (
                               <figure
                                    key={`${image.src}-${index}`}

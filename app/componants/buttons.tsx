@@ -10,7 +10,7 @@ export function ButtonService({ text, href, orientation = "left" }: Button) {
      return (
           <Link href={href} className="inline-block">
                <div className={`relative inline-flex ml-2 lg:ml-0`}>
-                    <div className="relative z-20 flex w-fit items-center justify-center rounded-lg bg-main px-6 py-2">
+                    <div className="relative z-20 flex w-fit items-center justify-center rounded-lg bg-main px-6 py-2 buttonmain">
                          <p className="font-play text-3xl lg:text-4xl italic text-bg">{text}</p>
                     </div>
                     <div
@@ -26,7 +26,7 @@ export function ButtonService({ text, href, orientation = "left" }: Button) {
 export function ButtonGalerie({ text, href }: Button) {
      return (
           <Link href={href} className="inline-text bg-main mx-auto lg:mx-0">
-               <p className="mx-auto lg:mx-0 font-play text-2xl italic text-bg bg-main w-fit rounded-lg px-12 py-2">
+               <p className="mx-auto lg:mx-0 font-play text-2xl italic text-bg bg-main w-fit rounded-lg px-12 py-2 buttonmain">
                     {text}
                </p>
           </Link>

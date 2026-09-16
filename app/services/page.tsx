@@ -33,7 +33,7 @@ export default function Page() {
                <Navbar />
                <main>
                     <MobileNav />
-                    <h1 className="titlemain text-center text-8xl! my-24">Nos Services</h1>
+                    <h1 className="titlemain text-center text-4xl lg:text-8xl! my-24">Nos Services</h1>
                     {serviceList.slice(0, 2).map((serv, i) => (
                          <ServiceDiv key={i} {...serv} />
                     ))}

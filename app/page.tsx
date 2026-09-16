@@ -32,12 +32,12 @@ export default function Home() {
                               <h1 className="lg:col-start-1 text-5xl lg:text-7xl font-play text-sec font-bold italic">
                                    Rénovation Intérieure à Lille et alentours
                               </h1>
-                              <p className="lg:col-start-2 row-start-2 text-2xl lg:text-3xl font-bold font-play">
+                              <p className="lg:col-start-2 row-start-2 text-2xl lg:text-3xl font-bold font-man">
                                    Depuis plus de 4 ans, nous mettons nos 34 ans d'experience dans la peinture en
                                    batiment, l'enduit,la pose de sol et les finitions décoratives.
                               </p>
                               <Link href={"/services"} className="lg:col-start-2 row-start-3">
-                                   <p className="px-24 py-3 text-xl lg:text-3xl bg-main text-bg font-play font-bold italic w-fit rounded-lg">
+                                   <p className="px-24 py-3 text-xl lg:text-3xl bg-main text-bg font-play font-bold italic w-fit rounded-lg buttonmain">
                                         {"Nos Services ->"}
                                    </p>
                               </Link>
@@ -116,7 +116,7 @@ export default function Home() {
                                    className="col-start-4 col-span-2 row-start-3 row-span-2"
                               />
                               <Link href={"/galerie"} className="w-fit row-start-4 col-start-2 col-span-1 mt-12">
-                                   <p className="bg-sec px-24 py-2 text-3xl lg:text-7xl rounded-lg font-play italic text-main ">
+                                   <p className="bg-sec px-24 py-2 text-3xl lg:text-7xl rounded-lg font-play italic text-main buttonsec">
                                         Galerie
                                    </p>
                               </Link>
