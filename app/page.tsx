@@ -1,18 +1,33 @@
 import Image from "next/image"
-
+import { ArrowRight } from "lucide-react"
 import { MobileNav, Navbar } from "./componants/Navbar"
 import Link from "next/link"
 import Footer from "./componants/Footer"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+     title: "Peintre en Bâtiment à Lille | Enduits & Rénovation | Styl'Home",
+     description:
+          "Styl'Home réalise vos travaux de peinture, enduit décoratif et rénovation intérieure à Lille et dans les environs. Devis gratuit sous 48h.",
+}
 
 const ServicesMain = [
      {
-          title: "Enduits + Peinture",
-          text: "Textes enduits + peintures et tout le tintouin à écrire tout ça la. Textes enduits + peintures et tout le tintouin à écrire tout ça la.Textes enduits + peintures et tout le tintouin à écrire tout ça la.Textes enduits + peintures et tout le tintouin à écrire tout ça la.Textes enduits + peintures et tout le tintouin à écrire tout ça la ",
+          number: "01",
+          title: "Enduits Décoratifs",
+          text: "Enduits à la chaux, talochés ou cirés : nous révélons le caractère de vos murs, intérieurs comme façades, avec une finition sur mesure.",
      },
-     { title: "Enduits + Peinture", text: "Textes enduits + peintures et tout le tintouin à écrire tout ça la " },
-     { title: "Enduits + Peinture", text: "Textes enduits + peintures et tout le tintouin à écrire tout ça la " },
+     {
+          number: "02",
+          title: "Peinture Intérieure & Extérieure",
+          text: "Teintes choisies avec vous, finitions mates ou satinées, appliquées avec la précision d'un savoir-faire transmis depuis 34 ans.",
+     },
+     {
+          number: "03",
+          title: "Pose de Sol & Finitions",
+          text: "Pose de sol et finitions décoratives pour parachever chaque pièce, du ratissage aux derniers détails qui font la différence.",
+     },
 ]
-
 export default function Home() {
      return (
           <>
@@ -63,6 +78,10 @@ export default function Home() {
                     </section>
                     <section className="bg-main">
                          <h2 className="titlemain lg:text-right pl-10 lg:pr-30 pt-10 text-bg!">Nos réalisations</h2>
+                         <p className="lg:text-right pl-10 lg:pr-30 pt-5 text-bg text-xl">
+                              {" "}
+                              Petit texte introductif du avant après avec des mots clés de villes
+                         </p>
                          <div className="flex lg:flex-row flex-col justify-center mt-12">
                               <div className="px-4 lg:px-0">
                                    <h3 className="text-4xl font-play italic font-bold text-sec ml-10">Avant</h3>
@@ -122,16 +141,40 @@ export default function Home() {
                               </Link>
                          </div>
                     </section>
-                    <section>
+                    <section className="py-24">
                          <h2 className="titlemain pl-10 lg:pl-30">Nos services</h2>
-                         <div className="flex lg:flex-row flex-col lg:gap-0 gap-6 justify-around py-12">
-                              {ServicesMain.map((art, i) => (
-                                   <article key={i} className="flex-1 text-center">
-                                        <h3 className="text-3xl font-play italic text-main">{art.title}</h3>
-                                        <p className="font-man text-center">{art.text}</p>
-                                   </article>
+
+                         <ol className="mt-16 px-4 lg:px-30 divide-y divide-sec/25 border-t border-b border-sec/25">
+                              {ServicesMain.map((serv) => (
+                                   <li key={serv.number} className="group">
+                                        <Link
+                                             href="/services"
+                                             className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-12 py-10 lg:py-12 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sec"
+                                        >
+                                             <span className="font-play italic text-4xl lg:text-5xl text-sec/50 lg:w-24 shrink-0">
+                                                  {serv.number}
+                                             </span>
+
+                                             <div className="flex-1">
+                                                  <h3 className="font-play italic text-3xl lg:text-4xl text-main text-balance transition-transform duration-300 group-hover:translate-x-2">
+                                                       {serv.title}
+                                                  </h3>
+                                                  <p className="font-man text-main/70 mt-2 lg:w-[65ch] text-pretty">
+                                                       {serv.text}
+                                                  </p>
+                                             </div>
+
+                                             <span className="flex items-center gap-2 font-play italic text-lg text-main shrink-0 lg:ml-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                                                  Découvrir
+                                                  <ArrowRight
+                                                       size={18}
+                                                       className="transition-transform duration-300 group-hover:translate-x-1"
+                                                  />
+                                             </span>
+                                        </Link>
+                                   </li>
                               ))}
-                         </div>
+                         </ol>
                     </section>
                     <Footer />
                </main>

@@ -30,7 +30,7 @@ export default function Page() {
                          <Form />
                     </div>
                </main>
-               <div className="lg:hidden">
+               <div className="mt-10">
                     <Footer />
                </div>
           </>

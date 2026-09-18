@@ -9,22 +9,19 @@ export default function Footer() {
                <div className="text-center lg:text-left">
                     <h3 className="font-play text-sec text-4xl">Légal</h3>
                     <Link href={"/mentions"}>
-                         <p>Mentions Légales</p>
-                    </Link>
-                    <Link href={"/cgv"}>
-                         <p>CGV</p>
+                         <p className="texthover">Mentions Légales</p>
                     </Link>
                </div>
                <div>
                     <h3 className="font-play text-sec text-4xl">Pages</h3>
                     <Link href={"/services"}>
-                         <p>Services</p>
+                         <p className="texthover">Services</p>
                     </Link>
                     <Link href={"/galerie"}>
-                         <p>Galerie</p>
+                         <p className="texthover">Galerie</p>
                     </Link>
                     <Link href={"/contact"}>
-                         <p>Contact</p>
+                         <p className="texthover">Contact</p>
                     </Link>
                </div>
           </footer>

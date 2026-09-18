@@ -58,7 +58,6 @@ export async function POST(request: NextRequest) {
           }
 
           const parsed = schema.safeParse(body)
-          await transporter.verify()
 
           if (!parsed.success) {
                return NextResponse.json({ error: parsed.error.issues[0].message, data: parsed }, { status: 400 })
@@ -72,7 +71,12 @@ export async function POST(request: NextRequest) {
                from: process.env.PRIV_EMAIL,
                to: process.env.PRIV_EMAIL,
                replyTo: clientEmail,
-               subject: `
+               subject: `Nouvelle demande de devis
+               `,
+               text: `${verified.objet}\n
+               De la part de ${escapeHtml(verified.name)} ${verified.prenom} (${verified.email})\n
+               \n
+               Message: ${verified.message}
                `,
           })
 
@@ -116,24 +120,7 @@ export async function POST(request: NextRequest) {
           await transporter.sendMail({
                from: process.env.PRIV_EMAIL,
                to: clientEmail,
-               subject: `Chez Gaël - Votre Rendez-vous le ${verified.name} ${verified.name} à ${verified.name}`,
-               text: `
-               ${verified.name}, merci d'avoir pris rendez-vous! 
-
-               Ceci est un message automatique pour vous confirmer que votre message a bien été pris en compte.
-               Si vous ne recevez pas de mail supplémentaire depuis un email se terminant en @gaeltournier.dev, considérez que votre rendez-vous 
-               confirmé! 
-
-               Vous avez rendez-vous le ${verified.name} ${verified.name} à ${verified.name}h pour un(e) ${verified.name}.
-               Voila les détails que vous m'avez transmis: 
-               "${verified.message}"
-
-               Si vous avez une question, vous pouvez m'envoyer un message sur whatsapp uniquement au +33 6 58 53 82 54 
-               ou par mail à contact@gaeltournier.dev. 
-
-               Très belle journée! 
-               Gaël. 
-               `,
+               subject: `Styl'Home | Nous avons bien reçu votre message ! `,
                html: clientMailHtml,
           })
 

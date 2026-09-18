@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Playfair_Display, Manrope } from "next/font/google"
 import "./globals.css"
+import { JsonLd } from "./componants/JsonLd"
 
 const playfairDisplay = Playfair_Display({
      variable: "--font-playfair_display",
@@ -22,7 +23,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
      return (
           <html lang="fr" className={`${playfairDisplay.variable} ${manrope.variable} font-man h-full antialiased`}>
-               <body className="bg-bg">{children}</body>
+               <body className="bg-bg">
+                    <JsonLd />
+                    {children}
+               </body>
           </html>
      )
 }

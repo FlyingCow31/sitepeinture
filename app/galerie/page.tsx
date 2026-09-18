@@ -77,17 +77,7 @@ export default function Page() {
                          ))}
 
                          {/* Special One */}
-                         <article className={`hidden lg:block col-start-1 col-span-2 row-start-8 row-span-2`}>
-                              <h3 className="font-play italic font-bold text-3xl">Titre spécial 1</h3>
-
-                              <p className="opacity-60 text-2xl font-play italic mt-5">09/09/2026</p>
-                              <p className="text-2xl w-[70%]">
-                                   Petit texte qui récapitule un peu la photo qu'il y a sur le coté...
-                              </p>
-                              <ButtonGalerie text="Réaliser un devis ->" href="/contact" />
-                         </article>
-                         {/* Special One */}
-                         <article className={`hidden lg:block col-start-1 col-span-2 row-start-8 row-span-2`}>
+                         <article className={`hidden lg:block col-start-1 col-span-2 row-start-8 row-span-2 `}>
                               <h3 className="font-play italic font-bold text-3xl">Titre spécial 1</h3>
 
                               <p className="opacity-60 text-2xl font-play italic mt-5">09/09/2026</p>

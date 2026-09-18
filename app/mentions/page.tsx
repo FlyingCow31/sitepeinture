@@ -24,7 +24,7 @@ export default function Page() {
                               Code APE&nbsp;: 3.34Z-C - Travaux de peinture intérieure et peinture plâtrerie
                               <br />
                               Adresse e-mail&nbsp;:
-                              <a href="mailto:contact@gaeltournier.dev" className="underline">
+                              <a href="mailto:contact@stylhome.fr" className="underline">
                                    contact@stylhome.fr
                               </a>
                               <br />
@@ -63,7 +63,7 @@ export default function Page() {
                               par l'intermédiaire du développeur.
                               <br />
                               Plus d'informations ici :{" "}
-                              <a href="https://gaeltournier.dev" target="_blank" className="text-blue-700">
+                              <a href="https://stylhome.fr" target="_blank" className="text-blue-700">
                                    https://gaeltournier.dev
                               </a>
                          </p>
@@ -97,7 +97,7 @@ export default function Page() {
                               disposez d&#39;un droit d&#39;accès, de rectification, d&#39;effacement, de limitation,
                               d&#39;opposition et de portabilité de vos données. Vous pouvez les exercer à
                               l&#39;adresse&nbsp;:{" "}
-                              <a href="mailto:contact@gaeltournier.dev" className="underline">
+                              <a href="mailto:contact@stylhome.fr" className="underline">
                                    contact@stylhome.fr
                               </a>
                               .
