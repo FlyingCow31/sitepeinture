@@ -4,11 +4,17 @@ import { MobileNav, Navbar } from "./componants/Navbar"
 import Link from "next/link"
 import Footer from "./componants/Footer"
 import { Metadata } from "next"
-
 export const metadata: Metadata = {
-     title: "Peintre en Bâtiment à Lille | Enduits & Rénovation | Styl'Home",
+     title: "Peintre en Bâtiment à Lille | Enduits & Rénovation",
      description:
           "Styl'Home réalise vos travaux de peinture, enduit décoratif et rénovation intérieure à Lille et dans les environs. Devis gratuit sous 48h.",
+     alternates: { canonical: "/" },
+     openGraph: {
+          title: "Peintre en Bâtiment à Lille | Styl'Home",
+          description:
+               "Enduits décoratifs, peinture intérieure & extérieure, pose de sol. Devis gratuit sous 48h, Lille et environs.",
+          url: "/",
+     },
 }
 
 const ServicesMain = [
@@ -44,10 +50,10 @@ export default function Home() {
                               className="hidden lg:block lg:object-cover z-0"
                          />
                          <div className="flex flex-col lg:inset-0 lg:absolute lg:grid grid-cols-2 p-4 gap-6 lg:gap-0 lg:p-12">
-                              <h1 className="lg:col-start-1 text-5xl lg:text-7xl font-play text-sec font-bold italic">
+                              <h1 className="lg:col-start-1 text-main! titlemain">
                                    Rénovation Intérieure à Lille et alentours
                               </h1>
-                              <p className="lg:col-start-2 row-start-2 text-2xl lg:text-3xl font-bold font-man">
+                              <p className="lg:col-start-2 row-start-2 text-2xl lg:text-3xl font-md font-man">
                                    Depuis plus de 4 ans, nous mettons nos 34 ans d'experience dans la peinture en
                                    batiment, l'enduit,la pose de sol et les finitions décoratives.
                               </p>
@@ -58,8 +64,8 @@ export default function Home() {
                               </Link>
                          </div>
                     </div>
-                    <section>
-                         <h2 className="titlemain pl-10 lg:pl-30 pt-10">Pourquoi Nous ?</h2>
+                    <section className="py-12">
+                         <h2 className="font-play italic text-3xl lg:text-5xl pl-10 lg:pl-30 pt-10">Pourquoi Nous ?</h2>
                          <article className="flex flex-col lg:flex-row gap-12 lg:gap-24 p-4 lg:p-10 justify-around mt-12">
                               <p className="lg:text-left text-justify text-3xl lg:w-[30%]">
                                    De père en fils, nous avons accumulés 34 ans d'experience dans la peinture en
@@ -76,8 +82,10 @@ export default function Home() {
                               />
                          </article>
                     </section>
-                    <section className="bg-main">
-                         <h2 className="titlemain lg:text-right pl-10 lg:pr-30 pt-10 text-bg!">Nos réalisations</h2>
+                    <section className="bg-main py-12">
+                         <h2 className="tfont-play italic text-3xl lg:text-5xl lg:text-right pl-10 lg:pr-30 pt-10 text-bg!">
+                              Nos réalisations
+                         </h2>
                          <p className="lg:text-right pl-10 lg:pr-30 pt-5 text-bg text-xl">
                               {" "}
                               Petit texte introductif du avant après avec des mots clés de villes
@@ -141,17 +149,17 @@ export default function Home() {
                               </Link>
                          </div>
                     </section>
-                    <section className="py-24">
-                         <h2 className="titlemain pl-10 lg:pl-30">Nos services</h2>
+                    <section className="py-12">
+                         <h2 className="font-play italic text-3xl lg:text-5xl pl-10 lg:pl-30">Nos services</h2>
 
-                         <ol className="mt-16 px-4 lg:px-30 divide-y divide-sec/25 border-t border-b border-sec/25">
+                         <ol className="mt-16 px-4 lg:px-30 divide-y divide-main/25 border-t border-b border-main/25">
                               {ServicesMain.map((serv) => (
                                    <li key={serv.number} className="group">
                                         <Link
                                              href="/services"
-                                             className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-12 py-10 lg:py-12 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-sec"
+                                             className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-12 py-10 lg:py-12 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-main"
                                         >
-                                             <span className="font-play italic text-4xl lg:text-5xl text-sec/50 lg:w-24 shrink-0">
+                                             <span className="font-play italic text-4xl lg:text-5xl text-main/50 lg:w-24 shrink-0">
                                                   {serv.number}
                                              </span>
 

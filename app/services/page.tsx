@@ -1,9 +1,22 @@
+import { Metadata } from "next"
 import { ButtonService } from "../componants/buttons"
 import Footer from "../componants/Footer"
 import { MobileNav, Navbar } from "../componants/Navbar"
 import { ServiceDiv, ServiceSpecial } from "../componants/services"
 import Image from "next/image"
 
+export const metadata: Metadata = {
+     title: "Nos Services : Enduits, Peinture & Pose de Sol",
+     description:
+          "Enduits décoratifs à la chaux, peinture intérieure et extérieure, pose de sol et finitions. Un savoir-faire artisanal à Lille depuis 34 ans.",
+     alternates: { canonical: "/services" },
+     openGraph: {
+          title: "Nos Services : Enduits, Peinture & Pose de Sol | Styl'Home",
+          description:
+               "Découvrez nos trois savoir-faire : enduits décoratifs, peinture intérieure & extérieure, pose de sol et finitions.",
+          url: "/services",
+     },
+}
 const serviceList = [
      {
           imgSrc: "https://placehold.co/400x400",

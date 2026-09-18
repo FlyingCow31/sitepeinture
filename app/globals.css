@@ -43,11 +43,11 @@
 
 .buttonmain:hover {
      background-color: var(--main-hover);
-     transition: all 100ms ease-in-out;
+     transition: all 200ms ease-in-out;
 }
 .buttonsec:hover {
      background-color: var(--sechover);
-     transition: all 100ms ease-in-out;
+     transition: all 200ms ease-in-out;
 }
 .texthover {
      opacity: 0.5;
@@ -55,7 +55,7 @@
 .texthover:hover {
      transform: translateX(7px);
      opacity: 1;
-     transition: all 100ms ease-in-out;
+     transition: all 200ms ease-in-out;
 }
 
 @media (max-width: 767px) {

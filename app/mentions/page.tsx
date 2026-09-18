@@ -1,6 +1,12 @@
+import { Metadata } from "next"
 import Footer from "../componants/Footer"
 import { MobileNav, Navbar } from "../componants/Navbar"
 
+export const metadata: Metadata = {
+     title: "Mentions Légales",
+     description: "Mentions légales du site Styl'Home, peintre en bâtiment à Lille.",
+     alternates: { canonical: "/mentions" },
+}
 export default function Page() {
      return (
           <>

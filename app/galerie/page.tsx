@@ -1,9 +1,21 @@
 import Image from "next/image"
 import { MobileNav, Navbar } from "../componants/Navbar"
 import Footer from "../componants/Footer"
-import Link from "next/link"
 import { ButtonGalerie } from "../componants/buttons"
+import { Metadata } from "next"
 
+export const metadata: Metadata = {
+     title: "Nos Réalisations : Chantiers de Peinture & Enduit",
+     description:
+          "Découvrez nos chantiers de peinture, enduit décoratif et rénovation intérieure réalisés à Lille et dans les environs.",
+     alternates: { canonical: "/galerie" },
+     openGraph: {
+          title: "Nos Réalisations | Styl'Home",
+          description:
+               "Chantiers de peinture, enduit décoratif et rénovation intérieure réalisés à Lille et alentours.",
+          url: "/galerie",
+     },
+}
 const images = [
      { src: "https://placehold.co/400x400", alt: "Oui", className: "lg:col-start-1 lg:row-start-1 lg:row-span-3" },
      { src: "https://placehold.co/400x400", alt: "Oui", className: "lg:col-start-2 lg:row-start-4 lg:row-span-2" },
@@ -67,7 +79,9 @@ export default function Page() {
                          {textes.map((texte, i) => (
                               <article key={i} className={`hidden lg:block ${texte.className}`}>
                                    {texte.main ? (
-                                        <h1 className="titlemain hidden lg:block">{texte.title}</h1>
+                                        <h1 className="font-play italic text-3xl lg:text-5xl hidden lg:block">
+                                             {texte.title}
+                                        </h1>
                                    ) : (
                                         <h3 className="font-play italic font-bold text-3xl">{texte.title}</h3>
                                    )}

@@ -2,7 +2,18 @@ import Image from "next/image"
 import Link from "next/link"
 import Footer from "../componants/Footer"
 import Form from "../componants/form"
+import { Metadata } from "next"
 
+export const metadata: Metadata = {
+     title: "Contact & Devis Gratuit",
+     description: "Demandez votre devis gratuit pour vos travaux de peinture, enduit ou rénovation intérieure à Lille.",
+     alternates: { canonical: "/contact" },
+     openGraph: {
+          title: "Contact & Devis Gratuit | Styl'Home",
+          description: "Demandez votre devis gratuit pour vos travaux de peinture et rénovation intérieure à Lille.",
+          url: "/contact",
+     },
+}
 export default function Page() {
      return (
           <>

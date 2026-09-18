@@ -129,8 +129,7 @@ export async function POST(request: NextRequest) {
           console.error("Contact API Error:", err)
           return NextResponse.json(
                {
-                    error: "Data has not been parsed correctly",
-                    details: err instanceof Error ? err.message : String(err),
+                    error: "Le formulaire a eu une erreur.",
                },
                { status: 400 },
           )
