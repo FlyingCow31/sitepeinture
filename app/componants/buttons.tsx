@@ -10,8 +10,8 @@ export function ButtonService({ text, href, orientation = "left" }: Button) {
      return (
           <Link href={href} className="inline-block">
                <div className={`relative inline-flex ml-2 lg:ml-0`}>
-                    <div className="relative z-20 flex w-fit items-center justify-center rounded-lg bg-main px-6 py-2 buttonmain">
-                         <p className="font-play text-3xl lg:text-4xl italic text-bg">{text}</p>
+                    <div className="relative z-20 flex w-fit items-center justify-center rounded-lg bg-main px-6 py-2 buttonmain text-center">
+                         <p className="font-play text-3xl lg:text-4xl italic text-bg text-center">{text}</p>
                     </div>
                     <div
                          className={`absolute top-3 h-14 w-90 lg:w-110 border border-sec rounded-lg ${

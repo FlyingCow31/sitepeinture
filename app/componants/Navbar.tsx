@@ -26,7 +26,7 @@ export function Navbar() {
                     <p className="hover:bg-darker rounded-lg px-4">Galerie</p>
                </Link>
                <Link href={"/contact"}>
-                    <p className="bg-sec px-6 py-2 rounded-lg hover:bg-sechover">Contact</p>
+                    <p className="bg-sec px-12 py-1 rounded-lg hover:bg-sechover">Contact</p>
                </Link>
           </nav>
      )

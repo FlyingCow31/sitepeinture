@@ -7,12 +7,12 @@ import { Metadata } from "next"
 export const metadata: Metadata = {
      title: "Peintre en Bâtiment à Lille | Enduits & Rénovation",
      description:
-          "Styl'Home réalise vos travaux de peinture, enduit décoratif et rénovation intérieure à Lille et dans les environs. Devis gratuit sous 48h.",
+          "Styl'Home réalise vos travaux de peinture, enduit décoratif et rénovation intérieure à Lille et dans les environs. Devis gratuit!",
      alternates: { canonical: "/" },
      openGraph: {
           title: "Peintre en Bâtiment à Lille | Styl'Home",
           description:
-               "Enduits décoratifs, peinture intérieure & extérieure, pose de sol. Devis gratuit sous 48h, Lille et environs.",
+               "Enduits décoratifs, peinture intérieure & extérieure, pose de sol. Devis gratuit, Lille et environs.",
           url: "/",
      },
 }
@@ -20,18 +20,18 @@ export const metadata: Metadata = {
 const ServicesMain = [
      {
           number: "01",
-          title: "Enduits Décoratifs",
-          text: "Enduits à la chaux, talochés ou cirés : nous révélons le caractère de vos murs, intérieurs comme façades, avec une finition sur mesure.",
+          title: "Enduit et peinture",
+          text: "Murs, plafonds, portes, bâtis, moulures et boiseries, en intérieur comme en extérieur. Selon l'état du support, nous procédons au rebouchage, au dégrossissage ou au ratissage, puis appliquons un enduit de finition poncé et contrôlé avant la mise en peinture. Car la peinture apporte la couleur et l'aspect final, mais ne corrige pas les défauts du support : c'est cette préparation qui détermine la qualité du résultat.",
      },
      {
           number: "02",
-          title: "Peinture Intérieure & Extérieure",
-          text: "Teintes choisies avec vous, finitions mates ou satinées, appliquées avec la précision d'un savoir-faire transmis depuis 34 ans.",
+          title: "Pose et rénovation de sols",
+          text: "Pose de sol stratifié, parquet contrecollé et parquet massif, ainsi que rénovation de parquet existant. Le support est contrôlé, ragréé si nécessaire, puis le parquet ancien est poncé et reçoit une nouvelle finition, vitrifiée ou huilée.",
      },
      {
           number: "03",
-          title: "Pose de Sol & Finitions",
-          text: "Pose de sol et finitions décoratives pour parachever chaque pièce, du ratissage aux derniers détails qui font la différence.",
+          title: "Finitions décoratives",
+          text: "Stucco, Marmorino, béton ciré et papier peint pour des effets de matière et de profondeur impossibles à obtenir avec une peinture classique. Comme pour tout support, la préparation reste la première étape de la réussite.",
      },
 ]
 export default function Home() {
@@ -54,8 +54,9 @@ export default function Home() {
                                    Rénovation Intérieure à Lille et alentours
                               </h1>
                               <p className="lg:col-start-2 row-start-2 text-2xl lg:text-3xl font-md font-man">
-                                   Depuis plus de 4 ans, nous mettons nos 34 ans d'experience dans la peinture en
-                                   batiment, l'enduit,la pose de sol et les finitions décoratives.
+                                   Depuis plus de 4 ans, peinture, enduits, sols, menuiserie et finitions décoratives
+                                   sont nos domaines d'expertise. Chaque prestation suit la même exigence : préparer le
+                                   support avant d'apporter la finition, pour un résultat propre et durable.
                               </p>
                               <Link href={"/services"} className="lg:col-start-2 row-start-3">
                                    <p className="px-24 py-3 text-xl lg:text-3xl bg-main text-bg font-play font-bold italic w-fit rounded-lg buttonmain">
@@ -67,11 +68,15 @@ export default function Home() {
                     <section className="py-12">
                          <h2 className="font-play italic text-3xl lg:text-5xl pl-10 lg:pl-30 pt-10">Pourquoi Nous ?</h2>
                          <article className="flex flex-col lg:flex-row gap-12 lg:gap-24 p-4 lg:p-10 justify-around mt-12">
-                              <p className="lg:text-left text-justify text-3xl lg:w-[30%]">
-                                   De père en fils, nous avons accumulés 34 ans d'experience dans la peinture en
-                                   batiments. Cette entreprise est pour nous le projet le plus ambicieux de notre
-                                   carrière. Nous réalisons tout sur mesure, tout est adapté à votre situation et à
-                                   votre batiment.
+                              <p className="lg:text-left text-justify text-2xl lg:w-[50%]">
+                                   <strong>De père en fils</strong>, la qualité de notre travail ne se rapporte pas
+                                   seulement au résultat final. Pour chaque prestation, nous <strong>analysons</strong>{" "}
+                                   d'abord l'état de votre propriété, puis nous determinons le résultat que vous
+                                   souhaitez obtenir. Nous réalisons ensuite les <strong>travaux préparatoires</strong>{" "}
+                                   nécessaire au bon fonctionnement du chantier, avant de réaliser l'ouvrage et d'en
+                                   apporter la finission. C'est cette préparation qui rends{" "}
+                                   <strong>le travail propre</strong> et qui permet à notre ouvrage de durer dans le
+                                   temps.
                               </p>
                               <Image
                                    src={"https://placehold.co/400x400"}
@@ -86,9 +91,9 @@ export default function Home() {
                          <h2 className="tfont-play italic text-3xl lg:text-5xl lg:text-right pl-10 lg:pr-30 pt-10 text-bg!">
                               Nos réalisations
                          </h2>
-                         <p className="lg:text-right pl-10 lg:pr-30 pt-5 text-bg text-xl">
-                              {" "}
-                              Petit texte introductif du avant après avec des mots clés de villes
+                         <p className="lg:text-right pl-10 lg:pr-30 lg:w-[80%] lg:ml-auto pt-5 text-bg text-xl">
+                              De la planification et la préparation du chantier, à la réalisation et aux finissions, à
+                              Lille, Genech ou Mérignies, découvrez un aperçu du résultat obtenu.
                          </p>
                          <div className="flex lg:flex-row flex-col justify-center mt-12">
                               <div className="px-4 lg:px-0">
@@ -101,7 +106,7 @@ export default function Home() {
                                         unoptimized
                                    />
                               </div>
-                              <p className="lg:text-[200px] text-7xl self-center text-sec font-play rotate-90 mt-4 lg:mt-0 lg:rotate-0">
+                              <p className="lg:text-[200px] text-7xl lg:text-5xl self-center text-sec font-play rotate-90 mt-4 lg:mt-0 lg:rotate-0 lg:mx-6">
                                    {"->"}
                               </p>
                               <div className="flex flex-col px-4 lg:px-0">
@@ -143,7 +148,7 @@ export default function Home() {
                                    className="col-start-4 col-span-2 row-start-3 row-span-2"
                               />
                               <Link href={"/galerie"} className="w-fit row-start-4 col-start-2 col-span-1 mt-12">
-                                   <p className="bg-sec px-24 py-2 text-3xl lg:text-7xl rounded-lg font-play italic text-main buttonsec">
+                                   <p className="bg-sec px-24 py-2 text-3xl lg:text-4xl lg:px-32 rounded-lg font-play italic text-main buttonsec">
                                         Galerie
                                    </p>
                               </Link>

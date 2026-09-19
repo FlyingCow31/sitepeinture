@@ -33,7 +33,7 @@
      text-decoration: underline;
      text-decoration-color: var(--sec);
      text-underline-offset: 20px;
-     text-decoration-thickness: 10px;
+     text-decoration-thickness: 5px;
      font-family: var(--font-play);
      color: var(--main);
      font-size: 50px;
