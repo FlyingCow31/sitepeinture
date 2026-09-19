@@ -11,7 +11,13 @@ export function Navbar() {
      return (
           <nav className="hidden p-4 lg:flex gap-6 w-full items-center font-play text-3xl italic text-main ">
                <Link href={"/"}>
-                    <Image src={"/logoaa.png"} alt="Logo de StylHome" width={120} height={60} className="border-3" />
+                    <Image
+                         src={"/logo-stylhome.webp"}
+                         alt="Logo de StylHome"
+                         width={200}
+                         height={100}
+                         className="border-3"
+                    />
                </Link>
                <Link href={"/services"} className="ml-auto">
                     <p className="hover:bg-darker rounded-lg px-4">Services</p>
@@ -34,7 +40,7 @@ export function MobileNav() {
           <>
                <nav className="font-play italic relative flex justify-between p-4 items-center lg:hidden bg-bg">
                     <Link href={"/"}>
-                         <Image src={"/logo.png"} alt="Logo Stylhome" width={192} height={40} />
+                         <Image src={"/logo-stylhome.webp"} alt="Logo Stylhome" width={192} height={40} />
                     </Link>
 
                     <button

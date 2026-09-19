@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Footer() {
      return (
           <footer className="bg-main flex lg:flex-row gap-4 lg:gap-0 flex-col-reverse text-bg text-xl items-center text-center lg:text-left justify-around p-4 italic">
-               <Image src={"https://placehold.co/150x150"} alt="Placeholder" height={150} width={150} unoptimized />
+               <Image src={"/icone-stylhome-footer.webp"} alt="Icone Stylhome Footer" height={150} width={150} />
 
                <div className="text-center lg:text-left">
                     <h3 className="font-play text-sec text-4xl">Légal</h3>
