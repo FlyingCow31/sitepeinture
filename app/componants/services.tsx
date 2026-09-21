@@ -36,10 +36,10 @@ export function ServiceDiv({ imgSrc, title, text, side, side2 = "left" }: Servic
                </div>
 
                <div
-                    className={`flex flex-col mt-12 lg:mt-0 text-center ${side === "right" ? "lg:text-left" : "lg:text-right"}`}
+                    className={`flex flex-col mt-12 lg:mt-0 text-center ${side === "right" ? "lg:text-left lg:pl-10" : "lg:text-right lg:pr-10"} lg:w-[60%] lg:gap-10 `}
                >
-                    <h2 className="font-play text-7xl italic">{title}</h2>
-                    <p className="text-3xl lg:w-150">{text}</p>
+                    <h2 className="font-play text-4xl lg:text-5xl italic break">{title}</h2>
+                    <p className={`text-3xl lg:w-[80%] ${side === "right" ? "" : "lg:self-end"}`}>{text}</p>
                </div>
           </article>
      )
@@ -47,7 +47,9 @@ export function ServiceDiv({ imgSrc, title, text, side, side2 = "left" }: Servic
 
 export function ServiceSpecial({ children, className = "" }: ServiceSpecial) {
      return (
-          <article className={`flex flex-col lg:flex-row-reverse justify-around mt-16 ${className}`}>
+          <article
+               className={`flex flex-col lg:flex-row-reverse lg:mx-12 lg:justify-between justify-around mt-16 ${className}`}
+          >
                {children}
           </article>
      )

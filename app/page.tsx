@@ -43,17 +43,21 @@ export default function Home() {
                     <MobileNav />
                     <div className="flex flex-col lg:block lg:relative lg:h-120 w-full lg:overflow-hidden">
                          <Image
-                              src={"https://placehold.co/1200x400"}
+                              src={"/images/largeherophoto.webp"}
                               alt="Placeholder"
                               fill
                               unoptimized
                               className="hidden lg:block lg:object-cover z-0"
                          />
-                         <div className="flex flex-col lg:inset-0 lg:absolute lg:grid grid-cols-2 p-4 gap-6 lg:gap-0 lg:p-12">
-                              <h1 className="lg:col-start-1 text-main! titlemain">
+
+                         {/* Color wash: ties the photo into --main so it reads as one designed hero, not two stacked layers */}
+                         <div className="hidden lg:block absolute inset-0 z-1 bg-linear-to-r from-main/70 via-main/45 to-main/65" />
+
+                         <div className="flex flex-col lg:inset-0 lg:absolute lg:grid grid-cols-2 p-4 gap-6 lg:gap-0 lg:p-12 z-10">
+                              <h1 className="lg:col-start-1 text-bg! titlemain">
                                    Rénovation Intérieure à Lille et alentours
                               </h1>
-                              <p className="lg:col-start-2 row-start-2 text-2xl lg:text-3xl font-md font-man">
+                              <p className="lg:col-start-2 row-start-2 text-2xl lg:text-3xl font-md font-man text-bg!">
                                    Depuis plus de 4 ans, peinture, enduits, sols, menuiserie et finitions décoratives
                                    sont nos domaines d'expertise. Chaque prestation suit la même exigence : préparer le
                                    support avant d'apporter la finition, pour un résultat propre et durable.
@@ -65,6 +69,7 @@ export default function Home() {
                               </Link>
                          </div>
                     </div>
+
                     <section className="py-12">
                          <h2 className="font-play italic text-3xl lg:text-5xl pl-10 lg:pl-30 pt-10">Pourquoi Nous ?</h2>
                          <article className="flex flex-col lg:flex-row gap-12 lg:gap-24 p-4 lg:p-10 justify-around mt-12">
@@ -99,11 +104,10 @@ export default function Home() {
                               <div className="px-4 lg:px-0">
                                    <h3 className="text-4xl font-play italic font-bold text-sec ml-10">Avant</h3>
                                    <Image
-                                        src={"https://placehold.co/500x500"}
+                                        src={"/images/avantrenovationmursetsol.webp"}
                                         alt="Placeholder"
                                         height={500}
                                         width={500}
-                                        unoptimized
                                    />
                               </div>
                               <p className="lg:text-[200px] text-7xl lg:text-5xl self-center text-sec font-play rotate-90 mt-4 lg:mt-0 lg:rotate-0 lg:mx-6">
@@ -114,38 +118,34 @@ export default function Home() {
                                         Après
                                    </h3>
                                    <Image
-                                        src={"https://placehold.co/500x500"}
+                                        src={"/images/apresrenovationmuretsol.webp"}
                                         alt="Placeholder"
                                         height={500}
                                         width={500}
-                                        unoptimized
                                    />
                               </div>
                          </div>
                          <div className="flex flex-col gap-6 lg:gap-0 px-4 lg:px-0 lg:grid grid-cols-6 grid-rows-4  items-center py-24">
                               <Image
-                                   src={"https://placehold.co/500x500"}
+                                   src={"/images/salledebainbleue.JPG"}
                                    alt="Placeholder"
                                    height={500}
                                    width={500}
-                                   unoptimized
-                                   className="col-start-2 col-span-2 row-start-1 row-span-2"
+                                   className="col-start-2 col-span-2 row-start-1 row-span-2 border-2 border-sec"
                               />
                               <Image
-                                   src={"https://placehold.co/500x500"}
+                                   src={"/images/peinturejauneetsols.jpg"}
                                    alt="Placeholder"
                                    height={500}
                                    width={500}
-                                   unoptimized
-                                   className="col-start-3 col-span-2 row-start-2 row-span-2"
+                                   className="col-start-3 col-span-2 row-start-2 row-span-2 border-2 border-sec"
                               />
                               <Image
-                                   src={"https://placehold.co/500x500"}
+                                   src={"/images/finitionsetpeinture.jpg"}
                                    alt="Placeholder"
                                    height={500}
                                    width={500}
-                                   unoptimized
-                                   className="col-start-4 col-span-2 row-start-3 row-span-2"
+                                   className="col-start-4 col-span-2 row-start-3 row-span-2 border-2 border-sec"
                               />
                               <Link href={"/galerie"} className="w-fit row-start-4 col-start-2 col-span-1 mt-12">
                                    <p className="bg-sec px-24 py-2 text-3xl lg:text-4xl lg:px-32 rounded-lg font-play italic text-main buttonsec">

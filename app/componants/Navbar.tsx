@@ -11,19 +11,13 @@ export function Navbar() {
      return (
           <nav className="hidden p-4 lg:flex gap-6 w-full items-center font-play text-3xl italic text-main ">
                <Link href={"/"}>
-                    <Image
-                         src={"/logo-stylhome.webp"}
-                         alt="Logo de StylHome"
-                         width={200}
-                         height={100}
-                         className="border-3"
-                    />
+                    <Image src={"/logo-stylhome.webp"} alt="Logo de StylHome" width={200} height={100} />
                </Link>
                <Link href={"/services"} className="ml-auto">
-                    <p className="hover:bg-darker rounded-lg px-4">Services</p>
+                    <p className="hover:bg-darker rounded-lg px-8">Services</p>
                </Link>
                <Link href={"/galerie"}>
-                    <p className="hover:bg-darker rounded-lg px-4">Galerie</p>
+                    <p className="hover:bg-darker rounded-lg px-8">Galerie</p>
                </Link>
                <Link href={"/contact"}>
                     <p className="bg-sec px-12 py-1 rounded-lg hover:bg-sechover">Contact</p>

@@ -17,26 +17,30 @@ export const metadata: Metadata = {
      },
 }
 const images = [
-     { src: "https://placehold.co/400x400", alt: "Oui", className: "lg:col-start-1 lg:row-start-1 lg:row-span-3" },
-     { src: "https://placehold.co/400x400", alt: "Oui", className: "lg:col-start-2 lg:row-start-4 lg:row-span-2" },
-     { src: "https://placehold.co/400x400", alt: "Oui", className: "lg:col-start-3 lg:row-start-2 lg:row-span-2" },
-     { src: "https://placehold.co/400x400", alt: "Oui", className: "lg:col-start-1 lg:row-start-6 lg:row-span-2" },
-     { src: "https://placehold.co/400x400", alt: "Oui", className: "lg:col-start-2 lg:row-start-6 lg:row-span-2" },
-     { src: "https://placehold.co/400x400", alt: "Oui", className: "lg:col-start-1 lg:row-start-12 lg:row-span-2" },
+     { src: "/toilettespapierpeintpremium.jpg", alt: "Oui", className: "lg:col-start-1 lg:row-start-1 lg:row-span-3" },
+     { src: "salledebainbleue.JPG", alt: "Oui", className: "lg:col-start-2 lg:row-start-4 lg:row-span-2" },
+     { src: "chambrepeinturebois.jpg", alt: "Oui", className: "lg:col-start-3 lg:row-start-2 lg:row-span-2" },
+     { src: "peinturemarronetbois.jpg", alt: "Oui", className: "lg:col-start-1 lg:row-start-6 lg:row-span-2" },
+     { src: "peinturejauneetsols.jpg", alt: "Oui", className: "lg:col-start-2 lg:row-start-6 lg:row-span-2" },
+     { src: "finitionsetpeinture.jpg", alt: "Oui", className: "lg:col-start-1 lg:row-start-12 lg:row-span-2" },
      {
-          src: "https://placehold.co/400x400",
+          src: "peinturedebois.webp",
           alt: "Oui",
           className: "lg:col-start-1 lg:col-span-2 lg:row-start-10 lg:row-span-2",
      },
-     { src: "https://placehold.co/400x400", alt: "Oui", className: "lg:col-start-2 lg:row-start-12 lg:row-span-2" },
-     { src: "https://placehold.co/400x400", alt: "Oui", className: "lg:col-start-3 lg:row-start-6 lg:row-span-4" },
+     {
+          src: "finissionsdecorativesetsolbois.jpg",
+          alt: "Oui",
+          className: "lg:col-start-2 lg:row-start-12 lg:row-span-2",
+     },
+     { src: "solenbois.jpg", alt: "Oui", className: "lg:col-start-3 lg:row-start-6 lg:row-span-4" },
 ]
 
 const textes = [
      {
           title: "Galerie",
-          date: "09/09/2026",
-          texte: "Petit texte qui récapitule un peu la photo qu'il y a sur le coté...",
+          date: "Mise à jour le 21/09/2026",
+          texte: "Bienvenue sur notre page galerie ! Découvrez nos précédentes créations, toutes réalisées à Lille et dans les alentours.",
           className: "lg:col-start-2 lg:col-span-2 lg:row-start-1 lg:row-span-2",
           main: true,
      },
@@ -73,7 +77,13 @@ export default function Page() {
                                    key={`${image.src}-${index}`}
                                    className={`relative overflow-hidden rounded-2xl aspect-4/3 lg:aspect-auto mx-4 lg:mx-0 ${image.className}`}
                               >
-                                   <Image src={image.src} alt={image.alt} fill unoptimized className="object-cover" />
+                                   <Image
+                                        src={`/images/${image.src}`}
+                                        alt={image.alt}
+                                        fill
+                                        unoptimized
+                                        className="object-cover"
+                                   />
                               </figure>
                          ))}
                          {textes.map((texte, i) => (
