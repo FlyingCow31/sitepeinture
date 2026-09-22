@@ -75,8 +75,8 @@ export default function Form() {
      }, [loading])
 
      return (
-          <form className="-mt-10 flex flex-col gap-2" onSubmit={HandleSubmit}>
-               <div className="flex flex-col gap-4 p-5">
+          <form className="flex flex-col gap-2" onSubmit={HandleSubmit}>
+               <div className="flex flex-col gap-4 ">
                     <input
                          type="text"
                          onChange={(e) => setWebsite(e.target.value)}
@@ -86,9 +86,9 @@ export default function Form() {
                          style={{ position: "absolute", left: "-9999px" }}
                     />
                </div>
-               <div className="flex items-center justify-between">
+               <div className="flex items-center justify-between ">
                     <div className="flex flex-col w-[49%]">
-                         <label htmlFor="name" className="ml-10 -mb-1 secondary-title">
+                         <label htmlFor="name" className="ml-10 -mb-1 font-play italic text-lg font-bold">
                               Nom
                          </label>
                          <input
@@ -103,7 +103,7 @@ export default function Form() {
                          />
                     </div>
                     <div className="flex flex-col w-[49%]">
-                         <label htmlFor="prenom" className="ml-10 -mb-1 secondary-title">
+                         <label htmlFor="prenom" className="ml-10 -mb-1 font-play italic text-lg font-bold">
                               Prénom
                          </label>
                          <input
@@ -120,7 +120,7 @@ export default function Form() {
                </div>
 
                <div className="flex flex-col">
-                    <label htmlFor="email" className="ml-10 -mb-1 secondary-title">
+                    <label htmlFor="email" className="ml-10 -mb-1 font-play italic text-lg font-bold">
                          Email
                     </label>
                     <input
@@ -136,7 +136,7 @@ export default function Form() {
                </div>
 
                <div className="flex flex-col">
-                    <label htmlFor="phone" className="ml-10 -mb-1 secondary-title">
+                    <label htmlFor="phone" className="ml-10 -mb-1 font-play italic text-lg font-bold">
                          Numéro de téléphone
                     </label>
                     <input
@@ -152,7 +152,7 @@ export default function Form() {
                </div>
 
                <div className="flex flex-col">
-                    <label htmlFor="objet" className="ml-10 -mb-1 secondary-title">
+                    <label htmlFor="objet" className="ml-10 -mb-1 font-play italic text-lg font-bold">
                          Objet
                     </label>
                     <input
@@ -167,7 +167,7 @@ export default function Form() {
                </div>
 
                <div className="flex flex-col">
-                    <label htmlFor="message" className="ml-10 -mb-1 secondary-title">
+                    <label htmlFor="message" className="ml-10 -mb-1 font-play italic text-lg font-bold">
                          Détaillez votre demande
                     </label>
                     <textarea

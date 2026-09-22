@@ -17,28 +17,32 @@ export const metadata: Metadata = {
 export default function Page() {
      return (
           <>
-               <main className="flex lg:flex-row flex-col gap-6 ">
-                    <div className="relative w-screen h-50 lg:h-screen lg:w-1/2">
-                         <Image
-                              src={"https://placehold.co/400x400"}
-                              alt="alt"
-                              fill
-                              unoptimized
-                              className="object-cover"
-                         />
-                    </div>
-                    <div className="lg:w-[40%] lg:h-screen p-4 lg:p-0">
-                         <Link href={"/"} className="inline-block w-fit">
-                              <p className="font-man pt-5 opacity-50 texthover w-fit regular-text">{"<- Accueil"}</p>
-                         </Link>
-                         <h1 className="titlemain text-2xl! lg:text-3xl! mt-5">Réalisez un devis gratuitement</h1>
-                         <p className="opacity-50 mt-5 regular-text">
-                              Ou contactez-nous à{"\u00A0"}
-                              <a href="mailto:contact@stylhome.fr" className="text-blue-900">
-                                   contact@stylhome.fr
-                              </a>
-                         </p>
-                         <Form />
+               <main>
+                    <div className="flex lg:flex-row flex-col gap-6 relative lg:min-h-[calc(100vh-120px)]">
+                         <div className="relative h-50 w-full lg:h-auto lg:w-1/2 lg:min-h-[calc(100vh-120px)]">
+                              <Image
+                                   src={"https://placehold.co/500x400"}
+                                   alt="alt"
+                                   fill
+                                   unoptimized
+                                   className="object-cover"
+                              />
+                         </div>
+                         <div className="lg:w-[40%] p-4 lg:p-0 lg:flex lg:flex-col lg:justify-center">
+                              <Link href={"/"} className="inline-block w-fit">
+                                   <p className="font-man pt-5 opacity-50 texthover w-fit regular-text">
+                                        {"<- Accueil"}
+                                   </p>
+                              </Link>
+                              <h1 className="titlemain text-2xl! lg:text-3xl! mt-5">Réalisez un devis gratuitement</h1>
+                              <p className="opacity-50 mt-5 regular-text">
+                                   Ou contactez-nous à{"\u00A0"}
+                                   <a href="mailto:contact@stylhome.fr" className="text-blue-900">
+                                        contact@stylhome.fr
+                                   </a>
+                              </p>
+                              <Form />
+                         </div>
                     </div>
                </main>
                <div className="mt-10">
