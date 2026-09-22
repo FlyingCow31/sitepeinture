@@ -46,24 +46,22 @@ export default function Home() {
                               src={"/images/largeherophoto.webp"}
                               alt="Placeholder"
                               fill
-                              unoptimized
                               className="hidden lg:block lg:object-cover z-0"
                          />
 
-                         {/* Color wash: ties the photo into --main so it reads as one designed hero, not two stacked layers */}
                          <div className="hidden lg:block absolute inset-0 z-1 bg-linear-to-r from-main/70 via-main/45 to-main/65" />
 
                          <div className="flex flex-col lg:inset-0 lg:absolute lg:grid grid-cols-2 p-4 gap-6 lg:gap-0 lg:p-12 z-10">
-                              <h1 className="lg:col-start-1 text-bg! titlemain">
+                              <h1 className="lg:col-start-1 lg:text-bg! titlemain lg:text-6xl! leading-normal!">
                                    Rénovation Intérieure à Lille et alentours
                               </h1>
-                              <p className="lg:col-start-2 row-start-2 text-2xl lg:text-3xl font-md font-man text-bg!">
+                              <p className="lg:col-start-2 row-start-2 text-2xl font-semibold mb-2 lg:text-bg!">
                                    Depuis plus de 4 ans, peinture, enduits, sols, menuiserie et finitions décoratives
                                    sont nos domaines d'expertise. Chaque prestation suit la même exigence : préparer le
                                    support avant d'apporter la finition, pour un résultat propre et durable.
                               </p>
                               <Link href={"/services"} className="lg:col-start-2 row-start-3">
-                                   <p className="px-24 py-3 text-xl lg:text-3xl bg-main text-bg font-play font-bold italic w-fit rounded-lg buttonmain">
+                                   <p className="px-24 py-3 bg-main text-bg font-play font-bold italic w-fit rounded-lg buttonmain regular-text">
                                         {"Nos Services ->"}
                                    </p>
                               </Link>
@@ -71,9 +69,9 @@ export default function Home() {
                     </div>
 
                     <section className="py-12">
-                         <h2 className="font-play italic text-3xl lg:text-5xl pl-10 lg:pl-30 pt-10">Pourquoi Nous ?</h2>
+                         <h2 className="secondary-title pl-10 lg:pl-30 pt-10">Pourquoi Nous ?</h2>
                          <article className="flex flex-col lg:flex-row gap-12 lg:gap-24 p-4 lg:p-10 justify-around mt-12">
-                              <p className="lg:text-left text-justify text-2xl lg:w-[50%]">
+                              <p className="lg:text-left text-justify regular-text lg:w-[50%]">
                                    <strong>De père en fils</strong>, la qualité de notre travail ne se rapporte pas
                                    seulement au résultat final. Pour chaque prestation, nous <strong>analysons</strong>{" "}
                                    d'abord l'état de votre propriété, puis nous determinons le résultat que vous
@@ -93,16 +91,16 @@ export default function Home() {
                          </article>
                     </section>
                     <section className="bg-main py-12">
-                         <h2 className="tfont-play italic text-3xl lg:text-5xl lg:text-right pl-10 lg:pr-30 pt-10 text-bg!">
+                         <h2 className="secondary-title lg:text-right pl-10 lg:pr-30 pt-10 text-bg!">
                               Nos réalisations
                          </h2>
-                         <p className="lg:text-right pl-10 lg:pr-30 lg:w-[80%] lg:ml-auto pt-5 text-bg text-xl">
+                         <p className="lg:text-right pl-10 lg:pr-30 lg:w-[80%] lg:ml-auto pt-5 text-bg subtitle">
                               De la planification et la préparation du chantier, à la réalisation et aux finissions, à
                               Lille, Genech ou Mérignies, découvrez un aperçu du résultat obtenu.
                          </p>
                          <div className="flex lg:flex-row flex-col justify-center mt-12">
                               <div className="px-4 lg:px-0">
-                                   <h3 className="text-4xl font-play italic font-bold text-sec ml-10">Avant</h3>
+                                   <h3 className="secondary-title text-sec ml-10">Avant</h3>
                                    <Image
                                         src={"/images/avantrenovationmursetsol.webp"}
                                         alt="Placeholder"
@@ -110,13 +108,11 @@ export default function Home() {
                                         width={500}
                                    />
                               </div>
-                              <p className="lg:text-[200px] text-7xl lg:text-5xl self-center text-sec font-play rotate-90 mt-4 lg:mt-0 lg:rotate-0 lg:mx-6">
+                              <p className="self-center text-sec font-play rotate-90 mt-4 lg:mt-0 lg:rotate-0 lg:mx-6 text-8xl lg:text-9xl">
                                    {"->"}
                               </p>
                               <div className="flex flex-col px-4 lg:px-0">
-                                   <h3 className="text-4xl font-play italic font-bold text-sec self-end mr-10">
-                                        Après
-                                   </h3>
+                                   <h3 className="secondary-title text-sec self-end mr-10">Après</h3>
                                    <Image
                                         src={"/images/apresrenovationmuretsol.webp"}
                                         alt="Placeholder"
@@ -148,14 +144,14 @@ export default function Home() {
                                    className="col-start-4 col-span-2 row-start-3 row-span-2 border-2 border-sec"
                               />
                               <Link href={"/galerie"} className="w-fit row-start-4 col-start-2 col-span-1 mt-12">
-                                   <p className="bg-sec px-24 py-2 text-3xl lg:text-4xl lg:px-32 rounded-lg font-play italic text-main buttonsec">
+                                   <p className="bg-sec px-24 py-2 lg:px-32 rounded-lg font-play italic text-main buttonsec secondary-title">
                                         Galerie
                                    </p>
                               </Link>
                          </div>
                     </section>
                     <section className="py-12">
-                         <h2 className="font-play italic text-3xl lg:text-5xl pl-10 lg:pl-30">Nos services</h2>
+                         <h2 className="secondary-title pl-10 lg:pl-30">Nos services</h2>
 
                          <ol className="mt-16 px-4 lg:px-30 divide-y divide-main/25 border-t border-b border-main/25">
                               {ServicesMain.map((serv) => (
@@ -164,20 +160,20 @@ export default function Home() {
                                              href="/services"
                                              className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-12 py-10 lg:py-12 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-main"
                                         >
-                                             <span className="font-play italic text-4xl lg:text-5xl text-main/50 lg:w-24 shrink-0">
+                                             <span className="font-play italic text-main/50 lg:w-24 shrink-0 secondary-title">
                                                   {serv.number}
                                              </span>
 
                                              <div className="flex-1">
-                                                  <h3 className="font-play italic text-3xl lg:text-4xl text-main text-balance transition-transform duration-300 group-hover:translate-x-2">
+                                                  <h3 className="subtitle text-main text-balance transition-transform duration-300 group-hover:translate-x-2">
                                                        {serv.title}
                                                   </h3>
-                                                  <p className="font-man text-main/70 mt-2 lg:w-[65ch] text-pretty">
+                                                  <p className="regular-text text-main/70 mt-2 lg:w-[65ch] text-pretty">
                                                        {serv.text}
                                                   </p>
                                              </div>
 
-                                             <span className="flex items-center gap-2 font-play italic text-lg text-main shrink-0 lg:ml-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300">
+                                             <span className="flex items-center gap-2 font-play italic text-main shrink-0 lg:ml-auto opacity-70 group-hover:opacity-100 transition-opacity duration-300 regular-text">
                                                   Découvrir
                                                   <ArrowRight
                                                        size={18}

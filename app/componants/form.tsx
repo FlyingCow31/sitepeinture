@@ -73,7 +73,7 @@ export default function Form() {
      }, [loading])
 
      return (
-          <form className="-mt-5 flex flex-col gap-2" onSubmit={HandleSubmit}>
+          <form className="-mt-10 flex flex-col gap-2" onSubmit={HandleSubmit}>
                <div className="flex flex-col gap-4 p-5">
                     <input
                          type="text"
@@ -86,7 +86,7 @@ export default function Form() {
                </div>
                <div className="flex items-center justify-between">
                     <div className="flex flex-col w-[49%]">
-                         <label htmlFor="name" className="ml-10 -mb-1 text-2xl font-play italic">
+                         <label htmlFor="name" className="ml-10 -mb-1 secondary-title">
                               Nom
                          </label>
                          <input
@@ -101,7 +101,7 @@ export default function Form() {
                          />
                     </div>
                     <div className="flex flex-col w-[49%]">
-                         <label htmlFor="prenom" className="ml-10 -mb-1 text-2xl font-play italic">
+                         <label htmlFor="prenom" className="ml-10 -mb-1 secondary-title">
                               Prénom
                          </label>
                          <input
@@ -118,7 +118,7 @@ export default function Form() {
                </div>
 
                <div className="flex flex-col">
-                    <label htmlFor="email" className="ml-10 -mb-1 text-2xl font-play italic">
+                    <label htmlFor="email" className="ml-10 -mb-1 secondary-title">
                          Email
                     </label>
                     <input
@@ -134,7 +134,7 @@ export default function Form() {
                </div>
 
                <div className="flex flex-col">
-                    <label htmlFor="objet" className="ml-10 -mb-1 text-2xl font-play italic">
+                    <label htmlFor="objet" className="ml-10 -mb-1 secondary-title">
                          Objet
                     </label>
                     <input
@@ -149,7 +149,7 @@ export default function Form() {
                </div>
 
                <div className="flex flex-col">
-                    <label htmlFor="message" className="ml-10 -mb-1 text-2xl font-play italic">
+                    <label htmlFor="message" className="ml-10 -mb-1 secondary-title">
                          Détaillez votre demande
                     </label>
                     <textarea
@@ -163,10 +163,7 @@ export default function Form() {
                          required
                     />
                </div>
-               <button
-                    type="submit"
-                    className="border py-2 bg-main text-bg rounded-lg text-2xl font-play italic buttonmain"
-               >
+               <button type="submit" className="border py-2 bg-main text-bg rounded-lg secondary-title buttonmain">
                     Envoyer
                </button>
                {loading && (
@@ -176,8 +173,8 @@ export default function Form() {
                     >
                          <div className="flex min-h-65 flex-col items-center justify-center gap-4 rounded-2xl text-center">
                               <div className="h-14 w-14 animate-spin rounded-full border-4 border-white/20 border-t-white" />
-                              <p className="text-2xl font-bold">Envoi en cours</p>
-                              <p className="max-w-sm text-base leading-relaxed text-white/75">
+                              <p className="secondary-title font-bold">Envoi en cours</p>
+                              <p className="max-w-sm regular-text leading-relaxed text-white/75">
                                    Vous recevrez un mail de confirmation, vérifiez vos spams...
                               </p>
                          </div>
@@ -186,8 +183,8 @@ export default function Form() {
                {success && !loading && (
                     <div className="bg-tint/80 p-8 text-bg h-screen w-screen fixed inset-0 overflow-hidden">
                          <div className="flex min-h-65 flex-col items-center justify-center gap-4 rounded-2xl text-center">
-                              <p className="text-2xl font-bold">Message envoyé</p>
-                              <p className="max-w-sm text-base leading-relaxed text-white/75">
+                              <p className="secondary-title font-bold">Message envoyé</p>
+                              <p className="max-w-sm regular-text leading-relaxed text-white/75">
                                    Merci pour votre message, nous vous répondrons bientôt.
                               </p>
                          </div>
@@ -196,8 +193,8 @@ export default function Form() {
                {errors && !loading && (
                     <div className="bg-tint/80 p-8 text-bg h-screen w-screen fixed inset-0 overflow-hidden">
                          <div className="flex min-h-65 flex-col items-center justify-center gap-4 rounded-2xl text-center">
-                              <p className="text-2xl font-bold">Échec de l'envoi</p>
-                              <p className="max-w-sm text-base leading-relaxed text-white/75">{errors}</p>
+                              <p className="secondary-title font-bold">Échec de l'envoi</p>
+                              <p className="max-w-sm regular-text leading-relaxed text-white/75">{errors}</p>
                          </div>
                     </div>
                )}

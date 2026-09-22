@@ -17,7 +17,11 @@ export const metadata: Metadata = {
      },
 }
 const images = [
-     { src: "/toilettespapierpeintpremium.jpg", alt: "Oui", className: "lg:col-start-1 lg:row-start-1 lg:row-span-3" },
+     {
+          src: "toilettespapierpeintpremium.jpg",
+          alt: "Oui",
+          className: "lg:col-start-1 lg:row-start-1 lg:row-span-3",
+     },
      { src: "salledebainbleue.JPG", alt: "Oui", className: "lg:col-start-2 lg:row-start-4 lg:row-span-2" },
      { src: "chambrepeinturebois.jpg", alt: "Oui", className: "lg:col-start-3 lg:row-start-2 lg:row-span-2" },
      { src: "peinturemarronetbois.jpg", alt: "Oui", className: "lg:col-start-1 lg:row-start-6 lg:row-span-2" },
@@ -77,45 +81,39 @@ export default function Page() {
                                    key={`${image.src}-${index}`}
                                    className={`relative overflow-hidden rounded-2xl aspect-4/3 lg:aspect-auto mx-4 lg:mx-0 ${image.className}`}
                               >
-                                   <Image
-                                        src={`/images/${image.src}`}
-                                        alt={image.alt}
-                                        fill
-                                        unoptimized
-                                        className="object-cover"
-                                   />
+                                   <Image src={`/images/${image.src}`} alt={image.alt} fill className="object-cover" />
                               </figure>
                          ))}
                          {textes.map((texte, i) => (
-                              <article key={i} className={`hidden lg:block ${texte.className}`}>
+                              <article key={i} className={`hidden lg:block px-4 ${texte.className}`}>
                                    {texte.main ? (
-                                        <h1 className="font-play italic text-3xl lg:text-5xl hidden lg:block">
-                                             {texte.title}
-                                        </h1>
+                                        <h1 className="titlemain hidden lg:block">{texte.title}</h1>
                                    ) : (
-                                        <h3 className="font-play italic font-bold text-3xl">{texte.title}</h3>
+                                        <h3 className="secondary-title">{texte.title}</h3>
                                    )}
-                                   <p className="opacity-60 text-2xl font-play italic mt-5">{texte.date}</p>
-                                   <p className="text-2xl w-[70%]">{texte.texte}</p>
+                                   <p className="opacity-60 subtitle mt-5">{texte.date}</p>
+                                   <p className="regular-text w-[70%]">{texte.texte}</p>
                               </article>
                          ))}
 
                          {/* Special One */}
-                         <article className={`hidden lg:block col-start-1 col-span-2 row-start-8 row-span-2 `}>
-                              <h3 className="font-play italic font-bold text-3xl">Titre spécial 1</h3>
+                         <article className={`hidden px-4 lg:block col-start-1 col-span-2 row-start-8 row-span-2 `}>
+                              <h3 className="secondary-title">Titre spécial 1</h3>
 
-                              <p className="opacity-60 text-2xl font-play italic mt-5">09/09/2026</p>
-                              <p className="text-2xl w-[70%]">
+                              <p className="opacity-60 subtitle mt-5">09/09/2026</p>
+                              <p className="regular-text w-[70%]">
                                    Petit texte qui récapitule un peu la photo qu'il y a sur le coté...
                               </p>
                               <ButtonGalerie text="Réaliser un devis ->" href="/contact" />
                          </article>
                          {/* Special Two */}
-                         <article className={`text-center lg:text-left col-start-3 col-span-1 row-start-12 row-span-2`}>
-                              <h3 className="font-play italic font-bold text-3xl">Titre spécial 1</h3>
+                         <article
+                              className={`text-center px-4 lg:text-left col-start-3 col-span-1 row-start-12 row-span-2`}
+                         >
+                              <h3 className="secondary-title">Titre spécial 1</h3>
 
-                              <p className="opacity-60 text-2xl font-play italic mt-5">09/09/2026</p>
-                              <p className="text-2xl lg:w-[70%] py-8 lg:py-0">
+                              <p className="opacity-60 subtitle mt-5">09/09/2026</p>
+                              <p className="regular-text lg:w-[70%] py-8 lg:py-0">
                                    Petit texte qui récapitule un peu la photo qu'il y a sur le coté...
                               </p>
                               <ButtonGalerie text="Réaliser un devis ->" href="/contact" />

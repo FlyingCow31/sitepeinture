@@ -13,10 +13,10 @@ export default function Page() {
                <Navbar />
                <MobileNav />
                <main className="font-man text-center">
-                    <h1 className="titlemain py-12 lg:text-5xl h2:text-2xl! p:text-xl! p-4">Mentions Légales</h1>
+                    <h1 className="titlemain py-12 p-4">Mentions Légales</h1>
                     <section className="mb-8 ">
-                         <h2 className="text-2xl font-bold mb-3">1. Éditeur du site</h2>
-                         <p>
+                         <h2 className="secondary-title mb-3">1. Éditeur du site</h2>
+                         <p className="regular-text">
                               Le site <strong>stylhome.fr </strong> est édité par&nbsp;:
                               <br />
                               <strong>GONCALVES PATRICK EI (Styl'Home)</strong>
@@ -39,13 +39,13 @@ export default function Page() {
                     </section>
 
                     <section className="mb-8">
-                         <h2 className="text-2xl font-bold mb-3">2. Directeur de la publication</h2>
-                         <p>Gonclaves Patrick, en qualité d&#39;éditeur du site.</p>
+                         <h2 className="secondary-title mb-3">2. Directeur de la publication</h2>
+                         <p className="regular-text">Gonclaves Patrick, en qualité d&#39;éditeur du site.</p>
                     </section>
 
                     <section className="mb-8">
-                         <h2 className="text-2xl font-bold mb-3">3. Hébergement</h2>
-                         <p>
+                         <h2 className="secondary-title mb-3">3. Hébergement</h2>
+                         <p className="regular-text">
                               Le site est hébergé par&nbsp;:
                               <br />
                               <strong>Vercel Inc.</strong>
@@ -63,8 +63,8 @@ export default function Page() {
                          </p>
                     </section>
                     <section className="mb-8">
-                         <h2 className="text-2xl font-bold mb-3">4. Crédits</h2>
-                         <p>
+                         <h2 className="secondary-title mb-3">4. Crédits</h2>
+                         <p className="regular-text">
                               Ce site a été réalisé par Gaël TOURNIER, développeur web. Ce site est également hébergé
                               par l'intermédiaire du développeur.
                               <br />
@@ -76,8 +76,8 @@ export default function Page() {
                     </section>
 
                     <section className="mb-8">
-                         <h2 className="text-2xl font-bold mb-3">5. Propriété intellectuelle</h2>
-                         <p>
+                         <h2 className="secondary-title mb-3">5. Propriété intellectuelle</h2>
+                         <p className="regular-text">
                               L&#39;ensemble des contenus présents sur ce site (textes, images, graphismes, logo, code
                               source, structure) est, sauf mention contraire, la propriété exclusive de l'entreprise et
                               protégé par le Code de la propriété intellectuelle.
@@ -89,8 +89,8 @@ export default function Page() {
                     </section>
 
                     <section className="mb-8">
-                         <h2 className="text-2xl font-bold mb-3">6. Données personnelles</h2>
-                         <p>
+                         <h2 className="secondary-title mb-3">6. Données personnelles</h2>
+                         <p className="regular-text">
                               Les données collectées via le formulaire de contact (nom, adresse e-mail, message) sont
                               traitées par l'entreprise, responsable du traitement, dans le seul but de répondre aux
                               demandes reçues. La base légale du traitement est l&#39;intérêt légitime à répondre aux
@@ -122,8 +122,8 @@ export default function Page() {
                     </section>
 
                     <section className="mb-8">
-                         <h2 className="text-2xl font-bold mb-3">7. Cookies et mesure d&#39;audience</h2>
-                         <p>
+                         <h2 className="secondary-title mb-3">7. Cookies et mesure d&#39;audience</h2>
+                         <p className="regular-text">
                               Ce site utilise Vercel Analytics et Vercel Speed Insights à des fins de mesure
                               d&#39;audience et de performance. Ces outils ne déposent pas de cookies et ne collectent
                               aucune donnée permettant d&#39;identifier personnellement les visiteurs&nbsp;; à ce titre,
@@ -134,8 +134,8 @@ export default function Page() {
                     </section>
 
                     <section className="mb-8">
-                         <h2 className="text-2xl font-bold mb-3">8. Liens hypertextes</h2>
-                         <p>
+                         <h2 className="secondary-title mb-3">8. Liens hypertextes</h2>
+                         <p className="regular-text">
                               Ce site peut contenir des liens vers des sites tiers. L'entreprise n&#39;exerce aucun
                               contrôle sur ces sites et décline toute responsabilité quant à leur contenu ou à
                               l&#39;usage qui pourrait en être fait.
@@ -143,8 +143,8 @@ export default function Page() {
                     </section>
 
                     <section className="mb-8">
-                         <h2 className="text-2xl font-bold mb-3">9. Responsabilité</h2>
-                         <p>
+                         <h2 className="secondary-title mb-3">9. Responsabilité</h2>
+                         <p className="regular-text">
                               Les informations présentes sur ce site sont fournies à titre indicatif et peuvent être
                               modifiées à tout moment. L'entreprise s&#39;efforce d&#39;en assurer l&#39;exactitude mais
                               ne saurait être tenu responsable des erreurs, omissions ou d&#39;une éventuelle
@@ -153,8 +153,8 @@ export default function Page() {
                     </section>
 
                     <section className="mb-8">
-                         <h2 className="text-2xl font-bold mb-3">10. Droit applicable</h2>
-                         <p>
+                         <h2 className="secondary-title mb-3">10. Droit applicable</h2>
+                         <p className="regular-text">
                               Les présentes mentions légales sont soumises au droit français. En cas de litige, et à
                               défaut de résolution amiable, les tribunaux français seront seuls compétents.
                          </p>

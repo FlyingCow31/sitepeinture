@@ -29,10 +29,10 @@ export default function Page() {
                     </div>
                     <div className="lg:w-[40%] lg:h-screen p-4 lg:p-0">
                          <Link href={"/"} className="inline-block w-fit">
-                              <p className="font-man text-2xl pt-5 opacity-50 texthover w-fit">{"<- Accueil"}</p>
+                              <p className="font-man pt-5 opacity-50 texthover w-fit regular-text">{"<- Accueil"}</p>
                          </Link>
-                         <h1 className="titlemain text-3xl! mt-5">Réalisez un devis gratuitement</h1>
-                         <p className="opacity-50 mt-5">
+                         <h1 className="titlemain text-2xl! lg:text-3xl! mt-5">Réalisez un devis gratuitement</h1>
+                         <p className="opacity-50 mt-5 regular-text">
                               Ou contactez-nous à{"\u00A0"}
                               <a href="mailto:contact@stylhome.fr" className="text-blue-900">
                                    contact@stylhome.fr

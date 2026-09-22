@@ -46,7 +46,7 @@ export default function Page() {
                <Navbar />
                <main>
                     <MobileNav />
-                    <h1 className="titlemain text-center text-4xl lg:text-8xl! my-24">Nos Services</h1>
+                    <h1 className="titlemain text-center my-24">Nos Services</h1>
                     {serviceList.slice(0, 2).map((serv, i) => (
                          <ServiceDiv key={i} {...serv} />
                     ))}
@@ -56,10 +56,9 @@ export default function Page() {
                               <div className="relative h-80 w-80 lg:h-120 lg:w-120 z-10">
                                    <Image
                                         src={"/images/escalierphotoenduits.JPG"}
-                                        alt={`Enduits réalisé par StylHome à Lille`}
+                                        alt={`Peinture en escalier réalisés à Lille`}
                                         fill
                                         className="object-cover"
-                                        unoptimized
                                    />
                               </div>
 
@@ -69,7 +68,7 @@ export default function Page() {
                          </div>
 
                          <div className={`flex flex-col text-left mt-12 lg:mt-0`}>
-                              <p className="text-3xl lg:w-150 p-4 lg:p-0">
+                              <p className="regular-text lg:w-150 p-4 lg:p-0">
                                    Le point commun entre tous nos services est la préparation. Nous cherchons d'abord à
                                    comprendre l'état de l'existant, le résultat souhaité, puis les travaux nécessaires.
                                    C'est cette préparation adaptée qui garantit un résultat propre et durable.
@@ -121,7 +120,6 @@ export default function Page() {
                                         alt={`Enduits réalisé par StylHome à Lille`}
                                         fill
                                         className="object-cover"
-                                        unoptimized
                                    />
                               </div>
 
@@ -130,15 +128,15 @@ export default function Page() {
                               ></div>
                          </div>
 
-                         <div className={`flex flex-col text-center lg:text-left mt-12 lg:mt-0`}>
-                              <h2 className="font-play text-7xl italic">Finissions Décoratives</h2>
-                              <p className="text-3xl lg:w-150 my-20 p-4 lg:p-0">
+                         <div className={`flex flex-col text-left lg:text-left mt-12 lg:mt-0 px-4`}>
+                              <h2 className="secondary-title">Finissions Décoratives</h2>
+                              <p className="regular-text lg:w-150 p-4 lg:my-20 lg:p-0">
                                    Le Stucco, le Marmorino, le béton ciré et le papier peint permettent d'obtenir des
                                    effets de matière, des nuances et de la profondeur impossibles à reproduire avec une
                                    peinture classique. Comme pour toute prestation, la préparation du support reste
                                    essentielle avant l'application du primaire ou de la sous-couche adaptée.
                               </p>
-                              <div className="flex items-center justify-left">
+                              <div className="flex items-left justify-left">
                                    <ButtonService
                                         text="Réaliser un devis gratuit ->"
                                         href="/contact"

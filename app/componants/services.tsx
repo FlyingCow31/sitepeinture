@@ -21,11 +21,10 @@ export function ServiceDiv({ imgSrc, title, text, side, side2 = "left" }: Servic
                <div className="relative mx-auto lg:mx-0">
                     <div className="relative h-80 w-80 lg:h-120 lg:w-120 z-10">
                          <Image
-                              src={/* `/images/${imgSrc}` */ imgSrc}
+                              src={imgSrc}
                               alt={`${title} réalisé par StylHome à Lille`}
                               fill
                               className="object-cover"
-                              unoptimized
                          />
                     </div>
                     {side2 != null && (
@@ -36,10 +35,10 @@ export function ServiceDiv({ imgSrc, title, text, side, side2 = "left" }: Servic
                </div>
 
                <div
-                    className={`flex flex-col mt-12 lg:mt-0 text-center ${side === "right" ? "lg:text-left lg:pl-10" : "lg:text-right lg:pr-10"} lg:w-[60%] lg:gap-10 `}
+                    className={`flex flex-col mt-12 lg:mt-0 text-left px-4 lg:px-0 ${side === "right" ? "lg:text-left lg:pl-10" : "lg:text-right lg:pr-10"} lg:w-[60%] lg:gap-10 `}
                >
-                    <h2 className="font-play text-4xl lg:text-5xl italic break">{title}</h2>
-                    <p className={`text-3xl lg:w-[80%] ${side === "right" ? "" : "lg:self-end"}`}>{text}</p>
+                    <h2 className="secondary-title break">{title}</h2>
+                    <p className={`regular-text lg:w-[80%] ${side === "right" ? "" : "lg:self-end"}`}>{text}</p>
                </div>
           </article>
      )

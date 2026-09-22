@@ -36,9 +36,38 @@
      text-decoration-thickness: 5px;
      font-family: var(--font-play);
      color: var(--main);
-     font-size: 50px;
+     font-size: 1.875rem;
+     line-height: 1.1;
      font-style: italic;
      font-weight: bold;
+}
+
+.secondary-title {
+     font-family: var(--font-play);
+     font-size: 1.5rem;
+     line-height: 1.2;
+     font-style: italic;
+     font-weight: 700;
+}
+
+.subtitle {
+     font-family: var(--font-play);
+     font-size: 1.2rem;
+     line-height: 1.4;
+     font-style: italic;
+}
+
+.display-number {
+     font-family: var(--font-play);
+     font-size: 4rem;
+     line-height: 1;
+     font-style: italic;
+}
+
+.regular-text {
+     font-family: var(--font-man);
+     font-size: 1rem;
+     line-height: 1.7;
 }
 
 .buttonmain:hover {
@@ -58,9 +87,30 @@
      transition: all 200ms ease-in-out;
 }
 
+@media (min-width: 1024px) {
+     .titlemain {
+          font-size: 2.25rem;
+     }
+
+     .secondary-title {
+          font-size: 1.875rem;
+     }
+
+     .subtitle {
+          font-size: 1.25rem;
+     }
+
+     .display-number {
+          font-size: 6rem;
+     }
+
+     .regular-text {
+          font-size: 1.125rem;
+     }
+}
+
 @media (max-width: 767px) {
      .titlemain {
-          font-size: 32px;
           text-underline-offset: 12px;
           text-decoration-thickness: 6px;
      }
