@@ -7,6 +7,7 @@ export default function Form() {
      const [name, setName] = useState("")
      const [prenom, setPrenom] = useState("")
      const [email, setEmail] = useState("")
+     const [phone, setPhone] = useState("")
      const [objet, setObjet] = useState("")
      const [message, setMessage] = useState("")
      const [website, setWebsite] = useState<string | null>(null)
@@ -28,6 +29,7 @@ export default function Form() {
                name,
                prenom,
                email,
+               phone,
                objet,
                message,
           }
@@ -129,6 +131,22 @@ export default function Form() {
                          type="email"
                          className="border-sec border-3 rounded-lg p-2"
                          placeholder="votreemail@nomdedomaine.fr"
+                         required
+                    />
+               </div>
+
+               <div className="flex flex-col">
+                    <label htmlFor="phone" className="ml-10 -mb-1 secondary-title">
+                         Numéro de téléphone
+                    </label>
+                    <input
+                         value={phone}
+                         onChange={(e) => setPhone(e.target.value)}
+                         id="phone"
+                         name="phone"
+                         type="phone"
+                         className="border-sec border-3 rounded-lg p-2"
+                         placeholder="0673429263"
                          required
                     />
                </div>

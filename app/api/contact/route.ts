@@ -13,13 +13,14 @@ const transporter = nodemailer.createTransport({
 })
 
 const schema = z.object({
-     name: z.string(),
+     name: z.string().max(100).nonempty(),
      email: z
           .string({ message: "L'Email est obligatoire!" })
           .email({
                message: "L'email est obligatoire!",
           })
           .nonempty(),
+     phone: z.string({ message: "Le numéro de téléphone est obligatoire!" }).nonempty(),
      prenom: z.string(),
      message: z.string({ message: "Vous devez décrire votre demande!" }).nonempty(),
      objet: z.string().max(100),
@@ -60,7 +61,7 @@ export async function POST(request: NextRequest) {
           const parsed = schema.safeParse(body)
 
           if (!parsed.success) {
-               return NextResponse.json({ error: parsed.error.issues[0].message, data: parsed }, { status: 400 })
+               return NextResponse.json({ error: parsed.error.issues[0].message }, { status: 400 })
           }
 
           const verified = parsed.data
@@ -124,7 +125,7 @@ export async function POST(request: NextRequest) {
                html: clientMailHtml,
           })
 
-          return NextResponse.json({ ok: true, data: parsed })
+          return NextResponse.json({ ok: true })
      } catch (err) {
           console.error("Contact API Error:", err)
           return NextResponse.json(
