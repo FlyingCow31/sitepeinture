@@ -108,7 +108,7 @@ export default function Page() {
                          </article>
                          {/* Special Two */}
                          <article
-                              className={`text-center px-4 lg:text-left col-start-3 col-span-1 row-start-12 row-span-2`}
+                              className={`text-left px-4 lg:text-left col-start-3 col-span-1 row-start-12 row-span-2`}
                          >
                               <h3 className="secondary-title">Titre spécial 1</h3>
 

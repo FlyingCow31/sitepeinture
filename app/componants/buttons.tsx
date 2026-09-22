@@ -25,8 +25,8 @@ export function ButtonService({ text, href, orientation = "left" }: Button) {
 
 export function ButtonGalerie({ text, href }: Button) {
      return (
-          <Link href={href} className="inline-text bg-main mx-auto lg:mx-0">
-               <p className="mx-auto lg:mx-0 font-play regular-text italic text-bg bg-main w-fit rounded-lg px-12 py-2 buttonmain">
+          <Link href={href} className="inline-text bg-main">
+               <p className="font-play regular-text italic text-bg bg-main w-fit rounded-lg px-12 py-2 buttonmain">
                     {text}
                </p>
           </Link>

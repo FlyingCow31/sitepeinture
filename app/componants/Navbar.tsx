@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export function Navbar() {
      return (
@@ -30,6 +30,22 @@ export function MobileNav() {
      const pathname = usePathname()
      const [status, setStatus] = useState(false)
 
+     useEffect(() => {
+          if (status) {
+               const scrollY = window.scrollY
+               document.body.style.position = "fixed"
+               document.body.style.top = `-${scrollY}px`
+               document.body.style.width = "100%"
+          } else {
+               const scrollY = document.body.style.top
+               document.body.style.position = ""
+               document.body.style.top = ""
+               document.body.style.width = ""
+               if (scrollY) {
+                    window.scrollTo(0, parseInt(scrollY || "0") * -1)
+               }
+          }
+     }, [status])
      return (
           <>
                <nav className="font-play italic relative flex justify-between p-4 items-center lg:hidden bg-bg">
