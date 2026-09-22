@@ -38,6 +38,16 @@ const images = [
           className: "lg:col-start-2 lg:row-start-12 lg:row-span-2",
      },
      { src: "solenbois.jpg", alt: "Oui", className: "lg:col-start-3 lg:row-start-6 lg:row-span-4" },
+     {
+          src: "maisonpeintureexterieure.jpg",
+          alt: "Oui",
+          className: "lg:col-start-1 lg:col-span-1 lg:row-start-4 lg:row-span-2",
+     },
+     {
+          src: "murpeinturebicolore.jpg",
+          alt: "Peinture murale bicolore noire et blanche à Genech",
+          className: "lg:col-start-3 lg:col-span-1 lg:row-start-10 lg:row-span-2",
+     },
 ]
 
 const textes = [
@@ -49,22 +59,10 @@ const textes = [
           main: true,
      },
      {
-          title: "Titre",
-          date: "09/09/2026",
-          texte: "Petit texte qui récapitule un peu la photo qu'il y a sur le coté...",
-          className: "lg:col-start-1 lg:col-span-1 lg:row-start-4 lg:row-span-2",
-     },
-     {
-          title: "Petit Titre",
-          date: "09/09/2026",
-          texte: "Petit texte qui récapitule un peu la photo qu'il y a sur le coté...",
+          title: "Finission et Sol",
+          date: "23/06/2025",
+          texte: "Mur décoratif de salle de bain, avec sol boisé, réalisé à Genech.",
           className: "lg:col-start-3 lg:col-span-1 lg:row-start-5 lg:row-span-1",
-     },
-     {
-          title: "Titre",
-          date: "09/09/2026",
-          texte: "Petit texte qui récapitule un peu la photo qu'il y a sur le coté...",
-          className: "lg:col-start-3 lg:col-span-1 lg:row-start-10 lg:row-span-2",
      },
 ]
 
@@ -98,11 +96,12 @@ export default function Page() {
 
                          {/* Special One */}
                          <article className={`hidden px-4 lg:block col-start-1 col-span-2 row-start-8 row-span-2 `}>
-                              <h3 className="secondary-title">Titre spécial 1</h3>
+                              <h3 className="secondary-title">Collection de peinture murale</h3>
 
-                              <p className="opacity-60 subtitle mt-5">09/09/2026</p>
+                              <p className="opacity-60 subtitle mt-5">17/11/2024</p>
                               <p className="regular-text w-[70%]">
-                                   Petit texte qui récapitule un peu la photo qu'il y a sur le coté...
+                                   Découvrez notre collection de peinture murale, réalisées à Sainghin-en-Mélantois, à
+                                   Mérignies et à Lompret.
                               </p>
                               <ButtonGalerie text="Réaliser un devis ->" href="/contact" />
                          </article>
@@ -110,11 +109,9 @@ export default function Page() {
                          <article
                               className={`text-left px-4 lg:text-left col-start-3 col-span-1 row-start-12 row-span-2`}
                          >
-                              <h3 className="secondary-title">Titre spécial 1</h3>
-
-                              <p className="opacity-60 subtitle mt-5">09/09/2026</p>
+                              <h3 className="secondary-title">(Re)Découvrez votre bâtisse</h3>
                               <p className="regular-text lg:w-[70%] py-8 lg:py-0">
-                                   Petit texte qui récapitule un peu la photo qu'il y a sur le coté...
+                                   Accordez à votre bâtisse un nouveau look, réalisez un devis gratuit.
                               </p>
                               <ButtonGalerie text="Réaliser un devis ->" href="/contact" />
                          </article>

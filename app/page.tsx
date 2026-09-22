@@ -21,17 +21,17 @@ const ServicesMain = [
      {
           number: "01",
           title: "Enduit et peinture",
-          text: "Murs, plafonds, portes, bâtis, moulures et boiseries, en intérieur comme en extérieur. Selon l'état du support, nous procédons au rebouchage, au dégrossissage ou au ratissage, puis appliquons un enduit de finition poncé et contrôlé avant la mise en peinture. Car la peinture apporte la couleur et l'aspect final, mais ne corrige pas les défauts du support : c'est cette préparation qui détermine la qualité du résultat.",
+          text: "Travaux d'enduit et de peinture intérieure/extérieure sur murs, plafonds, portes, bâtis, encadrements, moulures et boiseries. Avant toute mise en peinture, nous contrôlons l'état du support et identifions les trous, fissures, défauts et irrégularités. Selon son état et la finition recherchée, nous réalisons les préparations nécessaires : rebouchage, reprises d'enduit, ponçage, etc. La peinture apporte ensuite la couleur et l'aspect final, sur un support correctement préparé pour obtenir un résultat propre, régulier et durable.",
      },
      {
           number: "02",
           title: "Pose et rénovation de sols",
-          text: "Pose de sol stratifié, parquet contrecollé et parquet massif, ainsi que rénovation de parquet existant. Le support est contrôlé, ragréé si nécessaire, puis le parquet ancien est poncé et reçoit une nouvelle finition, vitrifiée ou huilée.",
+          text: "Pose et rénovation de sols, après contrôle de la planéité, de la stabilité et de l'humidité du support existant. Un ragréage peut être réalisé avant la pose d'un sol stratifié, d'un parquet contrecollé ou d'un parquet massif, en pose flottante ou collée. Nous réalisons également la rénovation de parquet, avec ponçage progressif puis application d'une nouvelle finition vitrifiée ou huilée.",
      },
      {
           number: "03",
           title: "Finitions décoratives",
-          text: "Stucco, Marmorino, béton ciré et papier peint pour des effets de matière et de profondeur impossibles à obtenir avec une peinture classique. Comme pour tout support, la préparation reste la première étape de la réussite.",
+          text: "Stucco, Marmorino, béton ciré et pose de papier peint. Ces techniques permettent d'obtenir des effets de matière, des nuances et de la profondeur difficiles à reproduire avec une peinture classique. Comme pour toute prestation, la préparation du support reste essentielle avant l'application du primaire, de la sous-couche adaptée ou de la finition décorative.",
      },
 ]
 export default function Home() {
@@ -71,15 +71,16 @@ export default function Home() {
                     <section className="py-12">
                          <h2 className="secondary-title pl-10 lg:pl-30 pt-10">Pourquoi Nous ?</h2>
                          <article className="flex flex-col lg:flex-row gap-12 lg:gap-24 p-4 lg:p-10 justify-around mt-12">
-                              <p className="lg:text-left text-justify regular-text lg:w-[50%]">
-                                   <strong>De père en fils</strong>, la qualité de notre travail ne se rapporte pas
-                                   seulement au résultat final. Pour chaque prestation, nous <strong>analysons</strong>{" "}
-                                   d'abord l'état de votre propriété, puis nous determinons le résultat que vous
-                                   souhaitez obtenir. Nous réalisons ensuite les <strong>travaux préparatoires</strong>{" "}
-                                   nécessaire au bon fonctionnement du chantier, avant de réaliser l'ouvrage et d'en
-                                   apporter la finission. C'est cette préparation qui rends{" "}
-                                   <strong>le travail propre</strong> et qui permet à notre ouvrage de durer dans le
-                                   temps.
+                              <p className="lg:text-left text-left regular-text lg:w-[50%]">
+                                   <strong>De père en fils</strong>, nous avons appris que la qualité de notre travail
+                                   ne se juge pas uniquement au résultat final. Pour chaque prestation, nous commençons
+                                   par <strong>analyser l'état du support</strong> et déterminer le résultat recherché.
+                                   Murs, plafonds, boiseries, sols ou autres surfaces : chaque support demande une
+                                   préparation adaptée. Nous réalisons ensuite les{" "}
+                                   <strong>travaux préparatoires</strong> nécessaires : rebouchage, reprises d'enduit,
+                                   ratissage, ponçage, égrenage ou autres préparations selon l'état du support, avant de
+                                   réaliser l'ouvrage et d'apporter la finition. C'est cette préparation qui permet
+                                   d'obtenir un <strong>travail propre, régulier et durable</strong> dans le temps.
                               </p>
                               <Image
                                    src={"https://placehold.co/400x400"}
@@ -95,14 +96,15 @@ export default function Home() {
                               Nos réalisations
                          </h2>
                          <p className="lg:text-right pl-10 lg:pr-30 lg:w-[80%] lg:ml-auto pt-5 text-bg subtitle">
-                              De la planification et la préparation du chantier, à la réalisation et aux finissions, à
-                              Lille, Genech ou Mérignies, découvrez un aperçu du résultat obtenu.
+                              De la planification et de la préparation du chantier jusqu'à la réalisation et aux
+                              finitions, découvrez un aperçu de nos travaux à Lille, Bondues ou Verlinghem, ainsi que du
+                              résultat attendu.
                          </p>
                          <div className="flex lg:flex-row flex-col justify-center mt-12">
                               <div className="px-4 lg:px-0">
                                    <h3 className="secondary-title text-sec ml-10">Avant</h3>
                                    <Image
-                                        src={"/images/avantrenovationmursetsol.webp"}
+                                        src={"/images/avantphotonouvelle.jpg"}
                                         alt="Placeholder"
                                         height={500}
                                         width={500}
@@ -114,7 +116,7 @@ export default function Home() {
                               <div className="flex flex-col px-4 lg:px-0">
                                    <h3 className="secondary-title text-sec self-end mr-10">Après</h3>
                                    <Image
-                                        src={"/images/apresrenovationmuretsol.webp"}
+                                        src={"/images/apresnouvellephoto.jpg"}
                                         alt="Placeholder"
                                         height={500}
                                         width={500}
