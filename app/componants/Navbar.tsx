@@ -76,45 +76,63 @@ export function MobileNav() {
                          id="mobile-menu"
                          tabIndex={-1}
                          inert={!status || undefined}
-                         className={`fixed inset-y-0 right-0 z-100 flex h-screen w-full max-w-sm flex-col gap-12 bg-bg p-4 pt-8 px-12 items-start *:text-2xl transition-transform duration-200 ease-out ${
+                         className={`fixed inset-y-0 right-0 z-100 flex h-screen w-full  flex-col gap-12 bg-bg p-4 items-start *:text-5xl transition-transform duration-200 ease-out font-play ${
                               status ? "translate-x-0" : "translate-x-full pointer-events-none"
                          }`}
                     >
-                         <button
-                              type="button"
-                              onClick={() => setStatus(false)}
-                              className="self-end"
-                              aria-label="Fermer le menu"
-                         >
-                              <X size={50} color="#06172c" className="cursor-pointer" />
-                         </button>
+                         <div className="flex justify-between w-full items-center p-4">
+                              <Image
+                                   src={"/logo-stylhome.webp"}
+                                   alt="Logo Stylhome"
+                                   width={200}
+                                   height={50}
+                                   className="border"
+                              />
+                              <button
+                                   type="button"
+                                   onClick={() => setStatus(false)}
+                                   className=""
+                                   aria-label="Fermer le menu"
+                              >
+                                   <X size={60} color="#06172c" className="cursor-pointer" />
+                              </button>
+                         </div>
 
                          <Link href={"/"}>
                               <p
-                                   className={`${pathname == "/" ? "bg-sec border-3" : "hover:bg-darker"} rounded-lg px-6 py-2`}
+                                   className={`${pathname == "/" ? "text-sec" : ""} hover:text-sec rounded-lg px-6 py-2 `}
                               >
-                                   → Accueil
+                                   Accueil
                               </p>
+                              {pathname == "/" && <hr className="mx-6 w-[30%] border border-sec bg-sec" />}
                          </Link>
                          <Link href={"/services"}>
                               <p
-                                   className={`${pathname == "/services" ? "bg-sec border-3" : "hover:bg-darker"} rounded-lg px-6 py-2`}
+                                   className={`${pathname == "/services" ? "text-sec" : ""} hover:text-sec rounded-lg px-6 py-2`}
                               >
-                                   → Services
+                                   Services
                               </p>
+                              {pathname == "/services" && <hr className="mx-6 w-[30%] border border-sec bg-sec" />}
                          </Link>
                          <Link href={"/galerie"}>
                               <p
-                                   className={`${pathname == "/galerie" ? "bg-sec border-3" : "hover:bg-darker"} rounded-lg px-6 py-2`}
+                                   className={`${pathname == "/galerie" ? "text-sec" : ""} hover:text-sec rounded-lg px-6 py-2`}
                               >
-                                   → Galerie
+                                   Galerie
+                              </p>
+                              {pathname == "/galerie" && <hr className="mx-6 w-[30%] border border-sec bg-sec" />}
+                         </Link>
+                         <Link href={"/contact"} className="mx-auto w-[90%] py-2">
+                              <p className={`bg-sec w-full text-center text-2xl text-bg py-2 rounded-lg`}>
+                                   Demander un devis
                               </p>
                          </Link>
-                         <Link href={"/contact"} className="mt-auto mb-20">
-                              <p className="bg-sec! px-6 py-2 text-xl font-man rounded-lg border-3 border-border hover:bg-sechover">
-                                   Contact →
+                         <div className="w-full mt-auto mb-20">
+                              <hr className="w-[90%] border opacity-30 mx-auto" />
+                              <p className="opacity-30 text-center text-sm mt-5">
+                                   Rénovation intérieure à Lille et alentours
                               </p>
-                         </Link>
+                         </div>
                     </div>
                </FocusTrap>
           </>
