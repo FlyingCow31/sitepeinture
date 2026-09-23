@@ -29,7 +29,7 @@ export function ServiceDiv({ imgSrc, title, text, side, side2 = "left" }: Servic
                     </div>
                     {side2 != null && (
                          <div
-                              className={` h-80 w-80 lg:h-120 lg:w-120 bg-transparent border-sec absolute ${side2 == "right" ? "-left-10 border z-11" : "left-10 border-3"} top-10 `}
+                              className={` h-70 w-70 lg:h-110 lg:w-110 bg-transparent border-sec absolute ${side2 == "right" ? "-left-15 border z-11" : "left-15 border-3"} top-15 `}
                          ></div>
                     )}
                </div>

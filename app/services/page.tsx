@@ -45,7 +45,7 @@ export default function Page() {
      return (
           <>
                <Navbar />
-               <main>
+               <main className="overflow-x-hidden">
                     <MobileNav />
                     <h1 className="titlemain text-center my-24">Nos Services</h1>
                     {serviceList.slice(0, 2).map((serv, i) => (
@@ -64,7 +64,7 @@ export default function Page() {
                               </div>
 
                               <div
-                                   className={`h-80 w-80 lg:h-120 lg:w-120 bg-transparent border-sec absolute -left-10 border z-11 top-10 `}
+                                   className={`h-70 w-70 lg:h-110 lg:w-110 bg-transparent border-sec absolute -left-5 border z-11 top-15 `}
                               ></div>
                          </div>
 
@@ -76,11 +76,6 @@ export default function Page() {
                                    différentes : réparation, rebouchage, enduit, etc. C'est cette préparation adaptée
                                    qui permet d'obtenir un résultat propre, régulier et durable.
                               </p>
-                              <div className="flex justify-around lg:justify-around my-20 *:border-b-2 *:pb-4 *:border-b-sec">
-                                   <Search size={70} color="#b8956a" />
-                                   <Hammer size={70} color="#b8956a" />
-                                   <BadgeCheck size={70} color="#b8956a" />
-                              </div>
                               <div className="flex items-center justify-left">
                                    <ButtonService
                                         text="Réaliser un devis gratuit ->"
@@ -106,7 +101,7 @@ export default function Page() {
                               </div>
 
                               <div
-                                   className={`h-80 w-80 lg:h-120 lg:w-120 bg-transparent border-sec absolute -left-10 border z-11 top-10 `}
+                                   className={`h-70 w-70 lg:h-110 lg:w-110 bg-transparent border-sec absolute left-5 border z-11 top-15 `}
                               ></div>
                          </div>
 

@@ -37,6 +37,7 @@ export function MobileNav() {
                document.body.style.top = `-${scrollY}px`
                document.body.style.width = "100%"
           } else {
+               setStatus(false)
                const scrollY = document.body.style.top
                document.body.style.position = ""
                document.body.style.top = ""
@@ -46,6 +47,7 @@ export function MobileNav() {
                }
           }
      }, [status])
+
      return (
           <>
                <nav className="font-play italic relative flex justify-between p-4 items-center lg:hidden bg-bg">

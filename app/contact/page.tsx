@@ -3,6 +3,7 @@ import Link from "next/link"
 import Footer from "../componants/Footer"
 import Form from "../componants/form"
 import { Metadata } from "next"
+import { MobileNav } from "../componants/Navbar"
 
 export const metadata: Metadata = {
      title: "Contact & Devis Gratuit",
@@ -17,6 +18,9 @@ export const metadata: Metadata = {
 export default function Page() {
      return (
           <>
+               <div className="hidden">
+                    <MobileNav />
+               </div>
                <main>
                     <div className="flex lg:flex-row flex-col gap-6 relative lg:min-h-[calc(100vh-120px)]">
                          <div className="relative h-50 w-full lg:h-auto lg:w-1/2 lg:min-h-[calc(100vh-120px)]">
