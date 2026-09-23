@@ -111,8 +111,8 @@ export default function Home() {
                               <div className="px-4 lg:px-0 md:mx-auto">
                                    <h3 className="secondary-title text-sec ml-10">Avant</h3>
                                    <Image
-                                        src={"/images/avantphotonouvelle.jpg"}
-                                        alt="Placeholder"
+                                        src={"/images/beforephotobaievitree.jpg"}
+                                        alt="Baie vitrée en rénovation"
                                         height={500}
                                         width={500}
                                    />
@@ -123,8 +123,8 @@ export default function Home() {
                               <div className="flex flex-col px-4 lg:px-0 md:mx-auto">
                                    <h3 className="secondary-title text-sec self-end mr-10">Après</h3>
                                    <Image
-                                        src={"/images/apresnouvellephoto.jpg"}
-                                        alt="Placeholder"
+                                        src={"/images/squareherophoto.webp"}
+                                        alt="Baie Vitrée rénovée"
                                         height={500}
                                         width={500}
                                    />
