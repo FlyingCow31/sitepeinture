@@ -56,8 +56,8 @@ export default function Page() {
                          <div className="relative mx-auto lg:mx-0 md:px-4">
                               <div className="relative h-80 w-80 md:h-100 md:w-100 lg:h-120 lg:w-120 z-10">
                                    <Image
-                                        src={"/images/escalierphotoenduits.JPG"}
-                                        alt={`Peinture en escalier réalisés à Lille`}
+                                        src={"/images/chambrepeintureboisvision.jpg"}
+                                        alt={`Peinture bois réalisée à Lille`}
                                         fill
                                         className="object-cover"
                                    />
