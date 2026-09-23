@@ -41,27 +41,33 @@ export default function Home() {
 
                <main>
                     <MobileNav />
-                    <div className="flex flex-col lg:block lg:relative lg:h-120 w-full lg:overflow-hidden">
+                    <div className="relative flex flex-col min-h-100 lg:block lg:h-140 w-full overflow-hidden">
                          <Image
                               src={"/images/largeherophoto.webp"}
                               alt="Placeholder"
                               fill
                               className="hidden lg:block lg:object-cover z-0"
                          />
+                         <Image
+                              src={"/images/squareherophoto.webp"}
+                              alt="Placeholder"
+                              fill
+                              className="block lg:hidden object-cover z-0"
+                         />
 
-                         <div className="hidden lg:block absolute inset-0 z-1 bg-linear-to-r from-main/70 via-main/45 to-main/65" />
+                         <div className="absolute inset-0 z-1 bg-main/60 lg:bg-linear-to-r lg:from-main/70 lg:via-main/45 lg:to-main/65" />
 
-                         <div className="flex flex-col lg:inset-0 lg:absolute lg:grid grid-cols-2 p-4 gap-6 lg:gap-0 lg:p-12 z-10">
-                              <h1 className="lg:col-start-1 lg:text-bg! titlemain lg:text-6xl! leading-normal!">
+                         <div className="relative flex flex-col lg:absolute lg:inset-0 lg:grid grid-cols-2 p-4 gap-6 lg:gap-0 lg:p-12 z-10">
+                              <h1 className="text-bg! lg:col-start-1 titlemain lg:text-6xl! leading-normal!">
                                    Rénovation Intérieure à Lille et alentours
                               </h1>
-                              <p className="lg:col-start-2 row-start-2 text-2xl font-semibold mb-2 lg:text-bg!">
-                                   Depuis plus de 4 ans, peinture, enduits, sols, menuiserie et finitions décoratives
-                                   sont nos domaines d'expertise. Chaque prestation suit la même exigence : préparer le
-                                   support avant d'apporter la finition, pour un résultat propre et durable.
+                              <p className="lg:col-start-2 row-start-2 text-2xl! font-semibold mb-2 text-bg!">
+                                   Depuis plus de 4 ans, nous mettons nos 34 ans d'experience dans la peinture en
+                                   batiment, l'enduit,la pose de sol et les finitions décoratives, à Lille et aux
+                                   alentours.
                               </p>
                               <Link href={"/services"} className="lg:col-start-2 row-start-3">
-                                   <p className="px-24 py-3 bg-main text-bg font-play font-bold italic w-fit rounded-lg buttonmain regular-text">
+                                   <p className="px-8 lg:px-24 py-3 bg-main text-bg font-play font-bold italic w-fit rounded-lg buttonmain regular-text">
                                         {"Nos Services ->"}
                                    </p>
                               </Link>
@@ -88,6 +94,7 @@ export default function Home() {
                                    height={400}
                                    width={400}
                                    unoptimized
+                                   className="md:mx-auto"
                               />
                          </article>
                     </section>
@@ -95,13 +102,13 @@ export default function Home() {
                          <h2 className="secondary-title lg:text-right pl-10 lg:pr-30 pt-10 text-bg!">
                               Nos réalisations
                          </h2>
-                         <p className="lg:text-right pl-10 lg:pr-30 lg:w-[80%] lg:ml-auto pt-5 text-bg subtitle">
+                         <p className="lg:text-right pl-4 lg:pr-30 lg:w-[80%] lg:ml-auto pt-5 text-bg subtitle">
                               De la planification et de la préparation du chantier jusqu'à la réalisation et aux
                               finitions, découvrez un aperçu de nos travaux à Lille, Bondues ou Verlinghem, ainsi que du
                               résultat attendu.
                          </p>
                          <div className="flex lg:flex-row flex-col justify-center mt-12">
-                              <div className="px-4 lg:px-0">
+                              <div className="px-4 lg:px-0 md:mx-auto">
                                    <h3 className="secondary-title text-sec ml-10">Avant</h3>
                                    <Image
                                         src={"/images/avantphotonouvelle.jpg"}
@@ -113,7 +120,7 @@ export default function Home() {
                               <p className="self-center text-sec font-play rotate-90 mt-4 lg:mt-0 lg:rotate-0 lg:mx-6 text-8xl lg:text-9xl">
                                    {"->"}
                               </p>
-                              <div className="flex flex-col px-4 lg:px-0">
+                              <div className="flex flex-col px-4 lg:px-0 md:mx-auto">
                                    <h3 className="secondary-title text-sec self-end mr-10">Après</h3>
                                    <Image
                                         src={"/images/apresnouvellephoto.jpg"}
@@ -160,17 +167,17 @@ export default function Home() {
                                    <li key={serv.number} className="group">
                                         <Link
                                              href="/services"
-                                             className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-12 py-10 lg:py-12 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-main"
+                                             className="flex w-full min-w-0 flex-col lg:flex-row lg:items-center gap-4 lg:gap-12 py-10 lg:py-12 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-main"
                                         >
                                              <span className="font-play italic text-main/50 lg:w-24 shrink-0 secondary-title">
                                                   {serv.number}
                                              </span>
 
-                                             <div className="flex-1">
+                                             <div className="min-w-0 flex-1">
                                                   <h3 className="subtitle text-main text-balance transition-transform duration-300 group-hover:translate-x-2">
                                                        {serv.title}
                                                   </h3>
-                                                  <p className="regular-text text-main/70 mt-2 lg:w-[65ch] text-pretty">
+                                                  <p className="regular-text text-main/70 mt-2 w-full max-w-[65ch] text-pretty">
                                                        {serv.text}
                                                   </p>
                                              </div>

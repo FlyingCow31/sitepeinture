@@ -53,8 +53,8 @@ export default function Page() {
                     ))}
 
                     <ServiceSpecial>
-                         <div className="relative mx-auto lg:mx-0">
-                              <div className="relative h-80 w-80 lg:h-120 lg:w-120 z-10">
+                         <div className="relative mx-auto lg:mx-0 md:px-4">
+                              <div className="relative h-80 w-80 md:h-100 md:w-100 lg:h-120 lg:w-120 z-10">
                                    <Image
                                         src={"/images/escalierphotoenduits.JPG"}
                                         alt={`Peinture en escalier réalisés à Lille`}
@@ -89,7 +89,7 @@ export default function Page() {
                          <ServiceDiv key={i} {...serv} />
                     ))}
 
-                    <ServiceSpecial className={"py-20"}>
+                    <ServiceSpecial className={"py-20 md:mx-auto"}>
                          <div className="relative">
                               <div className="relative h-80 w-80 lg:h-120 lg:w-120 z-10 mx-auto lg:mx-0">
                                    <Image

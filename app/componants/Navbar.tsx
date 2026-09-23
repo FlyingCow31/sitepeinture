@@ -78,7 +78,7 @@ export function MobileNav() {
                          id="mobile-menu"
                          tabIndex={-1}
                          inert={!status || undefined}
-                         className={`fixed inset-y-0 right-0 z-100 flex h-screen w-full  flex-col gap-12 bg-bg p-4 items-start *:text-5xl transition-transform duration-200 ease-out font-play ${
+                         className={`fixed inset-y-0 right-0 z-100 flex h-screen w-full  flex-col gap-12 bg-bg p-4 items-start *:text-5xl transition-transform duration-200 ease-out font-play md:overflow-y-auto ${
                               status ? "translate-x-0" : "translate-x-full pointer-events-none"
                          }`}
                     >

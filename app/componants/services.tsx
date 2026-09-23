@@ -47,7 +47,7 @@ export function ServiceDiv({ imgSrc, title, text, side, side2 = "left" }: Servic
 export function ServiceSpecial({ children, className = "" }: ServiceSpecial) {
      return (
           <article
-               className={`flex flex-col lg:flex-row-reverse lg:mx-12 lg:justify-between justify-around mt-16 ${className}`}
+               className={`flex flex-col md:w-full lg:flex-row-reverse lg:mx-12 lg:justify-around justify-around md:justify-around mt-16 ${className}`}
           >
                {children}
           </article>
