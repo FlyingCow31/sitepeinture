@@ -41,36 +41,54 @@ export default function Home() {
 
                <main>
                     <MobileNav />
-                    <div className="relative flex flex-col min-h-100 lg:block lg:h-140 w-full overflow-hidden">
+                    <div className="flex flex-col lg:block lg:relative lg:h-140 w-full overflow-hidden">
                          <Image
                               src={"/images/largeherophoto.webp"}
-                              alt="Placeholder"
+                              alt="Rénovation intérieure Styl'Home à Lille"
                               fill
                               className="hidden lg:block lg:object-cover z-0"
                          />
-                         <Image
-                              src={"/images/squareherophoto.webp"}
-                              alt="Placeholder"
-                              fill
-                              className="block lg:hidden object-cover z-0"
-                         />
-
-                         <div className="absolute inset-0 z-1 bg-main/60 lg:bg-linear-to-r lg:from-main/70 lg:via-main/45 lg:to-main/65" />
-
-                         <div className="relative flex flex-col lg:absolute lg:inset-0 lg:grid grid-cols-2 p-4 gap-6 lg:gap-0 lg:p-12 z-10">
-                              <h1 className="text-bg! lg:col-start-1 titlemain lg:text-6xl! leading-normal!">
+                         <div className="hidden lg:block absolute inset-0 z-1 bg-linear-to-r from-main/70 via-main/45 to-main/65" />
+                         <div className="hidden lg:grid absolute inset-0 grid-cols-2 p-12 z-10">
+                              <h1 className="col-start-1 text-bg! titlemain text-6xl! leading-normal!">
                                    Rénovation Intérieure à Lille et alentours
                               </h1>
-                              <p className="lg:col-start-2 row-start-2 text-2xl! font-semibold mb-2 text-bg!">
+                              <p className="col-start-2 row-start-2 text-2xl! font-semibold mb-2 text-bg!">
                                    Depuis plus de 4 ans, nous mettons nos 34 ans d'experience dans la peinture en
-                                   batiment, l'enduit,la pose de sol et les finitions décoratives, à Lille et aux
+                                   batiment, l'enduit, la pose de sol et les finitions décoratives, à Lille et aux
                                    alentours.
                               </p>
-                              <Link href={"/services"} className="lg:col-start-2 row-start-3">
-                                   <p className="px-8 lg:px-24 py-3 bg-main text-bg font-play font-bold italic w-fit rounded-lg buttonmain regular-text">
+                              <Link href={"/services"} className="col-start-2 row-start-3">
+                                   <p className="px-24 py-3 bg-main text-bg font-play font-bold italic w-fit rounded-lg buttonmain">
                                         {"Nos Services ->"}
                                    </p>
                               </Link>
+                         </div>
+
+                         <div className="lg:hidden">
+                              <div className="relative w-full h-70">
+                                   <Image
+                                        src={"/images/largeherophoto.webp"}
+                                        alt="Rénovation intérieure Styl'Home à Lille"
+                                        fill
+                                        className="object-cover"
+                                   />
+                              </div>
+                              <div className="flex flex-col gap-4 p-6 bg-main">
+                                   <h1 className="text-bg! titlemain text-4xl! leading-normal! decoration-6! underline-offset-8!">
+                                        Rénovation Intérieure à Lille et alentours
+                                   </h1>
+                                   <p className="text-lg! text-bg/90">
+                                        Depuis plus de 4 ans, nous mettons nos 34 ans d'experience dans la peinture en
+                                        batiment, l'enduit, la pose de sol et les finitions décoratives, à Lille et aux
+                                        alentours.
+                                   </p>
+                                   <Link href={"/services"}>
+                                        <p className="px-8 py-3 bg-sec text-main font-play font-bold italic w-fit rounded-lg buttonsec">
+                                             {"Nos Services ->"}
+                                        </p>
+                                   </Link>
+                              </div>
                          </div>
                     </div>
 
@@ -89,11 +107,10 @@ export default function Home() {
                                    d'obtenir un <strong>travail propre, régulier et durable</strong> dans le temps.
                               </p>
                               <Image
-                                   src={"https://placehold.co/400x400"}
-                                   alt="Placeholder"
+                                   src={"/images/Depereenfils.webp"}
+                                   alt="Photo des deux gérants de l'entreprise, père et fils"
                                    height={400}
                                    width={400}
-                                   unoptimized
                                    className="md:mx-auto"
                               />
                          </article>
@@ -133,21 +150,21 @@ export default function Home() {
                          <div className="flex flex-col gap-6 lg:gap-0 px-4 lg:px-0 lg:grid grid-cols-6 grid-rows-4  items-center py-24">
                               <Image
                                    src={"/images/salledebainbleue.JPG"}
-                                   alt="Placeholder"
+                                   alt="Salle de bain finissions murales à Mérignies"
                                    height={500}
                                    width={500}
                                    className="col-start-2 col-span-2 row-start-1 row-span-2 border-2 border-sec"
                               />
                               <Image
                                    src={"/images/peinturejauneetsols.jpg"}
-                                   alt="Placeholder"
+                                   alt="Peinture intérieure et sol en bois à Gruson"
                                    height={500}
                                    width={500}
                                    className="col-start-3 col-span-2 row-start-2 row-span-2 border-2 border-sec"
                               />
                               <Image
                                    src={"/images/finitionsetpeinture.jpg"}
-                                   alt="Placeholder"
+                                   alt="Finitions décoratives et peinture en plein coeur de Lille"
                                    height={500}
                                    width={500}
                                    className="col-start-4 col-span-2 row-start-3 row-span-2 border-2 border-sec"

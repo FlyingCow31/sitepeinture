@@ -94,7 +94,7 @@ export default function Page() {
                               <div className="relative h-80 w-80 lg:h-120 lg:w-120 z-10 mx-auto lg:mx-0">
                                    <Image
                                         src={"/images/finissionsdecorativesetsolbois.jpg"}
-                                        alt={`Enduits réalisé par StylHome à Lille`}
+                                        alt={`Enduits et finission à Chéreng`}
                                         fill
                                         className="object-cover"
                                    />

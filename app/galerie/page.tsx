@@ -19,28 +19,52 @@ export const metadata: Metadata = {
 const images = [
      {
           src: "toilettespapierpeintpremium.jpg",
-          alt: "Oui",
+          alt: "Pose de papier peint à Tressin",
           className: "lg:col-start-1 lg:row-start-1 lg:row-span-3",
      },
-     { src: "salledebainbleue.JPG", alt: "Oui", className: "lg:col-start-2 lg:row-start-4 lg:row-span-2" },
-     { src: "chambrepeinturebois.jpg", alt: "Oui", className: "lg:col-start-3 lg:row-start-2 lg:row-span-2" },
-     { src: "peinturemarronetbois.jpg", alt: "Oui", className: "lg:col-start-1 lg:row-start-6 lg:row-span-2" },
-     { src: "peinturejauneetsols.jpg", alt: "Oui", className: "lg:col-start-2 lg:row-start-6 lg:row-span-2" },
-     { src: "finitionsetpeinture.jpg", alt: "Oui", className: "lg:col-start-1 lg:row-start-12 lg:row-span-2" },
+     {
+          src: "salledebainbleue.JPG",
+          alt: "Salle de bain finissions murales à Mérignies",
+          className: "lg:col-start-2 lg:row-start-4 lg:row-span-2",
+     },
+     {
+          src: "chambrepeinturebois.jpg",
+          alt: "Peinture bois réalisée à Lille",
+          className: "lg:col-start-3 lg:row-start-2 lg:row-span-2",
+     },
+     {
+          src: "peinturemarronetbois.jpg",
+          alt: "Peinture intérieure salle à manger à Sainghin-en-Mélantois",
+          className: "lg:col-start-1 lg:row-start-6 lg:row-span-2",
+     },
+     {
+          src: "peinturejauneetsols.jpg",
+          alt: "Peinture intérieure bureau à Mérignies",
+          className: "lg:col-start-2 lg:row-start-6 lg:row-span-2",
+     },
+     {
+          src: "finitionsetpeinture.jpg",
+          alt: "Finissions décoratives et peinture en plein coeur de Lille",
+          className: "lg:col-start-1 lg:row-start-12 lg:row-span-2",
+     },
      {
           src: "peinturedebois.webp",
-          alt: "Oui",
+          alt: "Peinture sur bois à Gruson",
           className: "lg:col-start-1 lg:col-span-2 lg:row-start-10 lg:row-span-2",
      },
      {
           src: "finissionsdecorativesetsolbois.jpg",
-          alt: "Oui",
+          alt: "Finissions décoratives de salle de réception à Lille",
           className: "lg:col-start-2 lg:row-start-12 lg:row-span-2",
      },
-     { src: "solenbois.jpg", alt: "Oui", className: "lg:col-start-3 lg:row-start-6 lg:row-span-4" },
+     {
+          src: "solenbois.jpg",
+          alt: "Pose de sol en bois à Bouvines",
+          className: "lg:col-start-3 lg:row-start-6 lg:row-span-4",
+     },
      {
           src: "maisonpeintureexterieure.jpg",
-          alt: "Oui",
+          alt: "Peinture exterieure à Ennevelin",
           className: "lg:col-start-1 lg:col-span-1 lg:row-start-4 lg:row-span-2",
      },
      {
@@ -54,7 +78,7 @@ const textes = [
      {
           title: "Galerie",
           date: "Mise à jour le 21/09/2026",
-          texte: "Bienvenue sur notre page galerie ! Découvrez nos précédentes créations, toutes réalisées à Lille et dans les alentours.",
+          texte: "Bienvenue sur notre page galerie! Découvrez nos précédentes créations, toutes réalisées à Lille et dans les alentours.",
           className: "lg:col-start-2 lg:col-span-2 lg:row-start-1 lg:row-span-2",
           main: true,
      },
