@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 import { z } from "zod"
 import nodemailer from "nodemailer"
 
+// TODO: Replace .env variable with new email once it's changed
 const transporter = nodemailer.createTransport({
      host: process.env.SMTP_HOST,
      port: Number(process.env.SMTP_PORT),
@@ -106,7 +107,7 @@ export async function POST(request: NextRequest) {
                Vous nous avez transmis le message suivant: "${escapeHtml(verified.message)}"
           </p>
           <p style="margin: 0 0 16px; font-size: 16px">
-               Si vous avez une question, vous pouvez nous contacter par mail à l'adresse contact@stylhome.fr
+               Si vous avez une question, vous pouvez nous contacter par mail à l'adresse stylhome59@gmail.com
           </p>
           <p style="margin: 0; font-size: 16px">
                Très belle journée!

@@ -34,6 +34,7 @@ export function JsonLd() {
                               "Mouvaux",
                               "Marcq-en-Barœul",
                               "Lambersart",
+                              "Tressin",
                          ],
                          priceRange: "€€",
                     }),

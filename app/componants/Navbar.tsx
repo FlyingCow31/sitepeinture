@@ -17,7 +17,7 @@ export function Navbar() {
                     <p className="hover:bg-darker rounded-lg px-8">Services</p>
                </Link>
                <Link href={"/galerie"}>
-                    <p className="hover:bg-darker rounded-lg px-8">Galerie</p>
+                    <p className="hover:bg-darker rounded-lg px-8">Réalisations</p>
                </Link>
                <Link href={"/contact"}>
                     <p className="bg-sec px-12 py-1 rounded-lg hover:bg-sechover">Contact</p>
@@ -120,7 +120,7 @@ export function MobileNav() {
                               <p
                                    className={`${pathname == "/galerie" ? "text-sec" : ""} hover:text-sec rounded-lg px-6 py-2`}
                               >
-                                   Galerie
+                                   Réalisations
                               </p>
                               {pathname == "/galerie" && <hr className="mx-6 w-[30%] border border-sec bg-sec" />}
                          </Link>

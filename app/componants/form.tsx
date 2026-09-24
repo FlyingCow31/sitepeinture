@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 
 export default function Form() {
@@ -205,6 +206,11 @@ export default function Form() {
                               <p className="max-w-sm regular-text leading-relaxed text-white/75">
                                    Merci pour votre message, nous vous répondrons bientôt.
                               </p>
+                              <Link href={"/"}>
+                                   <p className="max-w-sm regular-text leading-relaxed text-white/75 underline">
+                                        Retour à l'accueil
+                                   </p>
+                              </Link>
                          </div>
                     </div>
                )}

@@ -41,54 +41,30 @@ export default function Home() {
 
                <main>
                     <MobileNav />
-                    <div className="flex flex-col lg:block lg:relative lg:h-140 w-full overflow-hidden">
-                         <Image
-                              src={"/images/largeherophoto.webp"}
-                              alt="Rénovation intérieure Styl'Home à Lille"
-                              fill
-                              className="hidden lg:block lg:object-cover z-0"
-                         />
-                         <div className="hidden lg:block absolute inset-0 z-1 bg-linear-to-r from-main/70 via-main/45 to-main/65" />
-                         <div className="hidden lg:grid absolute inset-0 grid-cols-2 p-12 z-10">
-                              <h1 className="col-start-1 text-bg! titlemain text-6xl! leading-normal!">
+                    <div className="relative w-full overflow-hidden lg:h-140">
+                         <div className="relative h-70 lg:absolute lg:inset-0 lg:h-auto">
+                              <Image
+                                   src="/images/largeherophoto.webp"
+                                   alt="Rénovation intérieure Styl'Home à Lille"
+                                   fill
+                                   className="object-cover"
+                              />
+                         </div>
+                         <div className="absolute inset-0 z-1 hidden bg-linear-to-r from-main/70 via-main/45 to-main/65 lg:block" />
+                         <div className="relative z-10 flex flex-col gap-4 bg-main p-6 lg:absolute lg:inset-0 lg:grid lg:grid-cols-2 lg:gap-0 lg:bg-transparent lg:p-12">
+                              <h1 className="text-bg! titlemain text-4xl! leading-normal! lg:col-start-1 lg:text-6xl!">
                                    Rénovation Intérieure à Lille et alentours
                               </h1>
-                              <p className="col-start-2 row-start-2 text-2xl! font-semibold mb-2 text-bg!">
+                              <p className="text-lg! text-bg/90 lg:col-start-2 lg:row-start-2 lg:text-2xl! lg:font-semibold lg:text-bg!">
                                    Depuis plus de 4 ans, nous mettons nos 34 ans d'experience dans la peinture en
                                    batiment, l'enduit, la pose de sol et les finitions décoratives, à Lille et aux
                                    alentours.
                               </p>
-                              <Link href={"/services"} className="col-start-2 row-start-3">
-                                   <p className="px-24 py-3 bg-main text-bg font-play font-bold italic w-fit rounded-lg buttonmain">
+                              <Link href="/services" className="lg:col-start-2 lg:row-start-3">
+                                   <p className="w-fit rounded-lg bg-sec px-8 py-3 font-play font-bold italic text-main buttonsec lg:bg-main lg:px-24 lg:text-bg lg:buttonmain">
                                         {"Nos Services ->"}
                                    </p>
                               </Link>
-                         </div>
-
-                         <div className="lg:hidden">
-                              <div className="relative w-full h-70">
-                                   <Image
-                                        src={"/images/largeherophoto.webp"}
-                                        alt="Rénovation intérieure Styl'Home à Lille"
-                                        fill
-                                        className="object-cover"
-                                   />
-                              </div>
-                              <div className="flex flex-col gap-4 p-6 bg-main">
-                                   <h1 className="text-bg! titlemain text-4xl! leading-normal! decoration-6! underline-offset-8!">
-                                        Rénovation Intérieure à Lille et alentours
-                                   </h1>
-                                   <p className="text-lg! text-bg/90">
-                                        Depuis plus de 4 ans, nous mettons nos 34 ans d'experience dans la peinture en
-                                        batiment, l'enduit, la pose de sol et les finitions décoratives, à Lille et aux
-                                        alentours.
-                                   </p>
-                                   <Link href={"/services"}>
-                                        <p className="px-8 py-3 bg-sec text-main font-play font-bold italic w-fit rounded-lg buttonsec">
-                                             {"Nos Services ->"}
-                                        </p>
-                                   </Link>
-                              </div>
                          </div>
                     </div>
 
