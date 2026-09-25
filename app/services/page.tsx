@@ -106,7 +106,7 @@ export default function Page() {
                          </div>
 
                          <div className={`flex flex-col text-left lg:text-left mt-12 lg:mt-0 px-4`}>
-                              <h2 className="secondary-title">Finissions Décoratives</h2>
+                              <h2 className="secondary-title">Finitions Décoratives</h2>
                               <p className="regular-text lg:w-150 p-4 lg:my-20 lg:p-0">
                                    Le Stucco, le Marmorino, le béton ciré et le papier peint permettent d'obtenir des
                                    effets de matière, des nuances et de la profondeur impossibles à reproduire avec une

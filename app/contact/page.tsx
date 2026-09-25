@@ -26,7 +26,7 @@ export default function Page() {
                          <div className="relative h-50 w-full lg:h-auto lg:w-1/2 lg:min-h-[calc(100vh-120px)]">
                               <Image
                                    src={"/images/finissionsdecorativesetsolbois.jpg"}
-                                   alt="Finissions décoratives et pose de sol en bois à Merignies"
+                                   alt="Finitions décoratives et pose de sol en bois à Merignies"
                                    fill
                                    className="object-cover"
                               />

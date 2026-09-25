@@ -126,7 +126,7 @@ export default function Home() {
                          <div className="flex flex-col gap-6 lg:gap-0 px-4 lg:px-0 lg:grid grid-cols-6 grid-rows-4  items-center py-24">
                               <Image
                                    src={"/images/salledebainbleue.JPG"}
-                                   alt="Salle de bain finissions murales à Mérignies"
+                                   alt="Salle de bain finitions murales à Mérignies"
                                    height={500}
                                    width={500}
                                    className="col-start-2 col-span-2 row-start-1 row-span-2 border-2 border-sec"

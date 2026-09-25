@@ -24,7 +24,7 @@ const images = [
      },
      {
           src: "salledebainbleue.JPG",
-          alt: "Salle de bain finissions murales à Mérignies",
+          alt: "Salle de bain finitions murales à Mérignies",
           className: "lg:col-start-2 lg:row-start-4 lg:row-span-2",
      },
      {
@@ -44,7 +44,7 @@ const images = [
      },
      {
           src: "finitionsetpeinture.jpg",
-          alt: "Finissions décoratives et peinture en plein coeur de Lille",
+          alt: "Finitions décoratives et peinture en plein coeur de Lille",
           className: "lg:col-start-1 lg:row-start-12 lg:row-span-2",
      },
      {
@@ -54,7 +54,7 @@ const images = [
      },
      {
           src: "finissionsdecorativesetsolbois.jpg",
-          alt: "Finissions décoratives de salle de réception à Lille",
+          alt: "Finitions décoratives de salle de réception à Lille",
           className: "lg:col-start-2 lg:row-start-12 lg:row-span-2",
      },
      {
